@@ -4,7 +4,7 @@
 export const cliConfig: { [key: string]: string | number | boolean | Array<string> } = {
   // In hash mode, it is recommended to use "" or "./" to represent relative paths when the name of the secondary directory is not certain.
   // The history mode uses "/" or "/secondary directory/" by default. Base can be empty when there is only hash. If you configure the history mode, then this item cannot be empty!
-  base: '',
+  base: './',
   // Directory name of the production environment build file
   outDir: 'dist',
   // Directory to place generated static resources (js, css, img, fonts).

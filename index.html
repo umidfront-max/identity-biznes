@@ -6,23 +6,32 @@
     <meta content="webkit" name="renderer" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control" />
-    <link href="/favicon.ico" rel="icon" sizes="any" />
-    <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
-    <link href="/apple-touch-icon-180x180.png" rel="apple-touch-icon" />
+    <link href="./favicon.ico" rel="icon" sizes="any" />
+    <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="./apple-touch-icon-180x180.png" rel="apple-touch-icon" />
     <title>Identity Biznes</title>
     <meta content="identity biznes, crm, nasiya, installment" name="keywords" />
     <meta content="Identity Biznes - Nasiya va to'lov boshqaruv tizimi" name="description" />
-    <link href="/static/css/loading.css" rel="stylesheet" />
+    <link href="./static/css/loading.css" rel="stylesheet" />
   </head>
   <body>
     <div id="app">
-      <figure>
-        <div class="dot white"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </figure>
+      <div id="app-loader">
+        <svg class="loader-logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#4F46E5"/>
+              <stop offset="1" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="16" fill="url(#lg)"/>
+          <text x="32" y="30" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="22" fill="white" letter-spacing="-1">IB</text>
+          <rect x="18" y="35" width="28" height="1.5" rx="0.75" fill="rgba(255,255,255,0.4)"/>
+          <text x="32" y="50" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="400" font-size="8" fill="rgba(255,255,255,0.85)" letter-spacing="3">BIZNES</text>
+        </svg>
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Yuklanmoqda...</div>
+      </div>
     </div>
     <script src="/src/main.ts" type="module"></script>
   </body>

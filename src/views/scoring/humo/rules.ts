@@ -9,7 +9,6 @@ const validateMessage = (rule: any, value: any, callback: any) => {
     callback()
   }
 }
-
 export const rules = ref<FormRules>({
   expiry: [{ required: true, trigger: 'blur', validator: validateMessage }],
   number: [{ required: true, trigger: 'blur', validator: validateMessage }],

@@ -1,111 +1,53 @@
-/*!  build: Vue Shop Vite
-     copyright: https://vue-admin-beautiful.com/shop-vite
- */
-figure {
-  position: absolute;
+:root {
+  --loader-primary: #6366F1;
+  --loader-secondary: #8B5CF6;
+}
+
+#app-loader {
+  position: fixed;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  width: 6.25em;
-  height: 6.25em;
-  margin: auto;
-  animation: rotate 2.4s linear infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+  z-index: 9999;
+  transition: opacity 0.4s ease;
 }
 
-.white {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: white;
-  opacity: 0;
-  animation: flash 2.4s linear infinite;
+.loader-logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 28px;
+  animation: logoPulse 2s ease-in-out infinite;
 }
 
-.dot {
-  position: absolute;
-  width: 1.8em;
-  height: 1.8em;
-  margin: auto;
-  border-radius: 100%;
-  transition: all 1s ease;
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e0e7ff;
+  border-top-color: var(--loader-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
-.dot:nth-child(2) {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: #f56c6c;
-  animation: dotsY 2.4s linear infinite;
+.loader-text {
+  margin-top: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  letter-spacing: 0.5px;
 }
 
-.dot:nth-child(3) {
-  top: 0;
-  right: 0;
-  left: 0;
-  background: #e6a23c;
-  animation: dotsX 2.4s linear infinite;
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
-.dot:nth-child(4) {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #67c23a;
-  animation: dotsY 2.4s linear infinite;
-}
-
-.dot:nth-child(5) {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #4e88f3;
-  animation: dotsX 2.4s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  10% {
-    width: 6.25em;
-    height: 6.25em;
-  }
-  66% {
-    width: 1.8em;
-    height: 1.8em;
-  }
-  100% {
-    width: 6.25em;
-    height: 6.25em;
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes dotsY {
-  66% {
-    width: 1.8em;
-  }
-  77% {
-    width: 0;
-  }
-}
-
-@keyframes dotsX {
-  66% {
-    height: 1.8em;
-  }
-  77% {
-    height: 0;
-  }
-}
-
-@keyframes flash {
-  33% {
-    border-radius: 0;
-  }
-  55% {
-    border-radius: 100%;
-  }
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.95); opacity: 0.7; }
 }
