@@ -1,0 +1,20 @@
+{
+  "good_morning": "Xayrli tong",
+  "good_afternoon": "Xayrli kun",
+  "good_evening": "Xayrli kech",
+  "good_night": "Xayrli tun",
+  "welcome": "Xush kelibsiz",
+  "hey": "Hoy",
+  "placeholders": {
+    "user_name": "Foydalanuvchi nomi",
+    "password": "Parol"
+  },
+  "login": "Login",
+  "hello": "Salom!",
+  "welcome_to": "Xush kelibsiz bu ",
+  "messages": {
+    "incorrect_token_message": "Kirish interfeysi g'ayritabiiy va token to'g'ri qaytarilmagan...",
+    "user_name_cannot_be_empty": "Foydalanuvchi nomi boʻsh boʻlishi mumkin emas",
+    "password_cannot_be_less_than_6_digits": "Parol 6 ta raqamdan kam bo'lmasligi kerak."
+  }
+}

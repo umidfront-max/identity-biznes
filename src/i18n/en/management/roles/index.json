@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Roles",
+    "single_title": "Role"
+  },
+  "fields": {
+    "name": "Name"
+  },
+  "create_new": "Create new role",
+  "updated_successfully": "Role updated successfully",
+  "messages": {
+    "enter_name": "Please enter a name",
+    "enter_percent": "Please enter a percent",
+    "enter_min_amount": "Please enter a minimum amount"
+  }
+}

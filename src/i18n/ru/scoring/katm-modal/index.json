@@ -1,0 +1,25 @@
+{
+  "fields": {
+    "passport_series": "Серия паспорта",
+    "passport_given_date": "Дата выдачи паспорта",
+    "birth_date": "Дата рождения",
+    "pinfl": "ПИНФЛ",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "middle_name": "Отчество",
+    "phone": "Номер телефона",
+    "extra_phone": "Доп. номер телефона",
+    "region_id": "Область",
+    "district_id": "Район"
+  },
+  "placeholders": {
+    "birth_date": "Дата рождения",
+    "region": "Область",
+    "district": "Район"
+  },
+  "avto_fill": "Заполнить автоматически",
+  "messages": {
+    "fill_field": "Заполните поле",
+    "enter_passport_series_and_numbers": "Введите серию и номер паспорта"
+  }
+}

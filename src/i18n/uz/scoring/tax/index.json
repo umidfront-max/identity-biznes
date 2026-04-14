@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Soliqlar"
+  },
+  "fields": {
+    "status": "Holat",
+    "pinfl": "JSHSHIR",
+    "debtBal": "Qarzdorlik",
+    "created_at": "Yaratilgan sana",
+    "updated_at": "O'zgartirilgan sana"
+  },
+  "create_new": "Yangi soliq so'rovi yaratish",
+  "created_successfully": "Soliq so'rovi muvaffaqiyatli yaratildi",
+  "messages": {
+    "fill_field": "Maydonni to'ldiring",
+    "must_be_14_characters": "14ta belgidan iborat bo'lsin"
+  }
+}

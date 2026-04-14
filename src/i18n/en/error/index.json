@@ -1,0 +1,26 @@
+{
+  "403": {
+    "oops": "Oops!",
+    "headline": "You do not have permission to operate.",
+    "info": "The current account does not have operation permissions, please contact the administrator.",
+    "btn": "Return to home page"
+  },
+  "404": {
+    "oops": "Oops!",
+    "headline": "The current page does not exist.",
+    "info": "Please check whether the URL you entered is correct, or click the button below to return to the home page.",
+    "btn": "Return to home page"
+  },
+  "500": {
+    "oops": "Oops!",
+    "headline": "A server error occurred.",
+    "info": "Please try again later, or click the button below to return to the home page.",
+    "btn": "Return to home page"
+  },
+  "503": {
+    "oops": "Oops!",
+    "headline": "Service is not available.",
+    "info": "The server is currently unable to handle the request, possibly due to overload or ongoing maintenance.",
+    "btn": "Return to home page"
+  }
+}

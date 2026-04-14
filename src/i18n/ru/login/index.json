@@ -1,0 +1,20 @@
+{
+  "good_morning": "Доброе утро",
+  "good_afternoon": "Добрый день",
+  "good_evening": "Добрый вечер",
+  "good_night": "Доброй ночи",
+  "welcome": "Добро пожаловать",
+  "hey": "Хей",
+  "placeholders": {
+    "user_name": "Имя пользователя",
+    "password": "Пароль"
+  },
+  "login": "Логин",
+  "hello": "Привет!",
+  "welcome_to": "Добро пожаловать в ",
+  "messages": {
+    "incorrect_token_message": "Интерфейс входа в систему ненормальный, и токен возвращается неправильно...",
+    "user_name_cannot_be_empty": "Имя пользователя не может быть пустым",
+    "password_cannot_be_less_than_6_digits": "Пароль не может содержать менее 6 цифр."
+  }
+}

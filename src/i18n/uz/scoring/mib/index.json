@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "MIB"
+  },
+  "fields": {
+    "status": "Holat",
+    "pinfl": "JSHSHIR",
+    "phone": "Telefon",
+    "debtBal": "Qarzdorlik",
+    "created_at": "Yaratilgan sana",
+    "updated_at": "O'zgartirilgan sana"
+  },
+  "placeholders": {
+    "pinfl": "PINFL ni kiriting"
+  },
+  "create_new": "Yangi mib yaratish",
+  "created_successfully": "MIB muvaffaqiyatli yaratildi",
+  "messages": {
+    "fill_field": "Maydonni to'ldiring",
+    "must_be_12_characters": "12ta belgidan iborat bo'lsin",
+    "must_be_14_characters": "14ta belgidan iborat bo'lsin"
+  }
+}

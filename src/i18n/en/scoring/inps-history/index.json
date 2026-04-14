@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "INPS history",
+    "single_title": "Single INPS history"
+  },
+  "columns": {
+    "status": "Status",
+    "pinfl": "PINFL",
+    "passport_series": "Passport Series",
+    "passport_number": "Passport Numbers",
+    "passport_given_date": "Passport Given Date",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "middle_name": "Middle Name",
+    "phone": "Phone",
+    "extra_phone": "Extra Phone",
+    "birth_date": "Birth Date",
+    "region_id": "Region",
+    "district_id": "District",
+    "fio": "FIO",
+    "created_at": "Created at",
+    "updated_at": "Updated at"
+  },
+  "inps_successfully": "INPS history successfully created",
+  "presence_report": {
+    "title": "Presence report",
+    "presence": "Presence",
+    "report_name": "Report name"
+  },
+  "incomes": {
+    "title": "Income",
+    "period": "Period",
+    "orgname": "Org. Name",
+    "org_inn": "Org. INN",
+    "income_summa": "Amount of income",
+    "inps_summa": "NPC amount",
+    "send_date": "Sending date"
+  },
+  "incomes_period": {
+    "title": "Income period",
+    "incomes_all_summa": "Sum of total income",
+    "incomes_period_begin": "Initial income period",
+    "incomes_period_end": "Ending income period"
+  }
+}

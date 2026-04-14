@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "INPS tarixlar",
+    "single_title": "INPS tarix"
+  },
+  "columns": {
+    "status": "Holat",
+    "pinfl": "JSHSHIR",
+    "passport_series": "Pasport seriyasi",
+    "passport_number": "Pasport raqami",
+    "passport_given_date": "Pasport berilgan sana",
+    "first_name": "Ism",
+    "last_name": "Familia",
+    "middle_name": "Otasining ismi",
+    "phone": "Telefon",
+    "extra_phone": "Qo'shimcha Telefon",
+    "birth_date": "Tug'ilgan sana",
+    "region_id": "Viloyat",
+    "district_id": "Tuman",
+    "fio": "F.I.O.",
+    "created_at": "Yaratilgan sana",
+    "updated_at": "O'zgartirilgan sana"
+  },
+  "inps_successfully": "INPS tarixi muvaffaqiyatli yaratildi",
+  "presence_report": {
+    "title": "Mavjudligi haqida hisobot",
+    "presence": "Mavjudligi",
+    "report_name": "Hisobot nomi"
+  },
+  "incomes": {
+    "title": "Daromad",
+    "period": "Davr",
+    "orgname": "Tashkilot nomi",
+    "org_inn": "Tashkilot INN",
+    "income_summa": "Daromad miqdori",
+    "inps_summa": "NPS miqdori",
+    "send_date": "Yuborilgan sana"
+  },
+  "incomes_period": {
+    "title": "Daromad davri",
+    "incomes_all_summa": "Umumiy daromad summasi",
+    "incomes_period_begin": "Dastlabki daromad davri",
+    "incomes_period_end": "Yakuniy daromad davri"
+  }
+}

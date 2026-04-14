@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "Пенсионные инфо.",
+    "single_title": "Пенсионный инфо."
+  },
+  "fields": {
+    "status": "Статус",
+    "fio": "Ф.И.О.",
+    "pinfl": "Пинфл",
+    "passport_series": "Серия паспорта",
+    "passport_number": "Номер паспорта",
+    "passport_given_date": "Дата выдачи паспорта",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "middle_name": "Отчество",
+    "phone": "Номер телефона",
+    "extra_phone": "Доп. номер телефона",
+    "birth_date": "Дата рождения",
+    "region_id": "Регион/Область",
+    "district_id": "Район/Округ"
+  },
+  "created_successfully": "Информация о пенсии создано успешно",
+  "create_new": "Создать новую информацию о пенсии",
+  "placeholders": {
+    "birth_date": "Дата рождения",
+    "region": "Область",
+    "district": "Район"
+  },
+  "response": {
+    "title": "Ответ",
+    "address": "Адрес",
+    "apptype": "Вид приложения",
+    "datepay": "Дата оплаты",
+    "datepens": "Дата пенсии",
+    "document": "Документ",
+    "experience": "Опыт",
+    "patronymlatin": "Отчество",
+    "pinpp": "ПИНПП",
+    "sum": "Сумма",
+    "type": "Тип"
+  },
+  "sum": {
+    "period": "Период",
+    "month": "Месяц",
+    "sum": "Сумма"
+  },
+  "messages": {
+    "fill_field": "Заполните поле"
+  }
+}

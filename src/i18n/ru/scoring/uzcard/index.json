@@ -1,0 +1,22 @@
+{
+  "fields": {
+    "status": "Статус",
+    "card_number": "Номер карты",
+    "card_expiry_date": "Срок действия карты",
+    "created_at": "Дата создания",
+    "updated_at": "Дата посл. обновления"
+  },
+  "messages": {
+    "fill_field": "Заполните поле",
+    "card_number_is_16_characters": "номер карты равен 16 символов",
+    "card_added_successfully": "Карта добавлена успешно"
+  },
+  "enter_card_number": "Введите номер карты",
+  "enter_card_expiry_date": "Введите срок действия карты",
+  "report": "Отчет",
+  "payment_info": "Информация о платеже",
+  "total": "Всего",
+  "term": "Срок",
+  "no_payments": "С этой карты нет платежей",
+  "month": "Месяц"
+}

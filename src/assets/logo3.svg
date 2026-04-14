@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 44" fill="none">
+  <defs>
+    <linearGradient id="lg3" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon -->
+  <rect width="44" height="44" rx="11" fill="url(#lg3)"/>
+  <text x="22" y="21" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="15" fill="white" letter-spacing="-0.5">IB</text>
+  <rect x="10" y="24" width="24" height="1.2" rx="0.6" fill="rgba(255,255,255,0.35)"/>
+  <text x="22" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="5.5" fill="rgba(255,255,255,0.85)" letter-spacing="2">BIZNES</text>
+  <!-- Text -->
+  <text x="54" y="20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="18" fill="#1F2937">Identity</text>
+  <text x="54" y="37" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="14" fill="#6B7280">Biznes</text>
+</svg>

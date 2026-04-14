@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "MIB"
+  },
+  "fields": {
+    "status": "Status",
+    "pinfl": "PINFL",
+    "phone": "Phone",
+    "debtBal": "Debt",
+    "created_at": "Created at",
+    "updated_at": "Updated at"
+  },
+  "placeholders": {
+    "pinfl": "Enter a PINFL"
+  },
+  "create_new": "Create new mib",
+  "created_successfully": "Mib was created successfully",
+  "messages": {
+    "fill_field": "Fill in the field",
+    "must_be_12_characters": "must be 12 characters",
+    "must_be_14_characters": "must be 14 characters"
+  }
+}

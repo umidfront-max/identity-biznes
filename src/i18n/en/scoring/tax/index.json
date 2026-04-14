@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Tax"
+  },
+  "fields": {
+    "status": "Status",
+    "pinfl": "PINFL",
+    "debtBal": "Debt",
+    "created_at": "Created at",
+    "updated_at": "Updated at"
+  },
+  "create_new": "Create new tax",
+  "created_successfully": "Tax was created successfully",
+  "messages": {
+    "fill_field": "Fill in the field",
+    "must_be_14_characters": "must be 14 characters"
+  }
+}

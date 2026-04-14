@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Roles",
+    "single_title": "Single role"
+  },
+  "fields": {
+    "name": "Ism"
+  },
+  "create_new": "Yangi rol yaratish",
+  "updated_successfully": "Rol muvaffaqiyatli yangilandi",
+  "messages": {
+    "enter_name": "Iltimos, ismingizni kiriting",
+    "enter_percent": "Iltimos, foizni kiriting",
+    "enter_min_amount": "Iltimos, minimal narxni kiriting"
+  }
+}

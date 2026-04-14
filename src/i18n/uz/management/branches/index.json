@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Filiallar",
+    "single_title": "Fillial"
+  },
+  "fields": {
+    "name": "Ism",
+    "address": "Adres",
+    "inn": "STIR",
+    "created_at": "Yaratilgan sana",
+    "updated_at": "O'zgartirilgan sana"
+  },
+  "messages": {
+    "enter_name": "Iltimos, ismingizni kiriting",
+    "enter_percent": "Iltimos, foizni kiriting",
+    "enter_min_amount": "Iltimos, minimal narxni kiriting"
+  },
+  "create_new": "Yangi filial yaratish"
+}

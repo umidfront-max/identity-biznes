@@ -1,0 +1,26 @@
+{
+  "403": {
+    "oops": "Voy!",
+    "headline": "Sizda ishlash uchun ruxsat yo'q.",
+    "info": "Joriy hisobda ishlash uchun ruxsat yo'q, iltimos, administrator bilan bog'laning.",
+    "btn": "Bosh sahifaga qaytish"
+  },
+  "404": {
+    "oops": "Voy!",
+    "headline": "Joriy sahifa mavjud emas.",
+    "info": "Siz kiritgan URL toʻgʻri yoki yoʻqligini tekshiring yoki bosh sahifaga qaytish uchun quyidagi tugmani bosing.",
+    "btn": "Bosh sahifaga qaytish"
+  },
+  "500": {
+    "oops": "Voy!",
+    "headline": "Serverda xatolik yuz berdi.",
+    "info": "Keyinroq qayta urinib ko‘ring yoki bosh sahifaga qaytish uchun quyidagi tugmani bosing.",
+    "btn": "Bosh sahifaga qaytish"
+  },
+  "503": {
+    "oops": "Voy!",
+    "headline": "Xizmat mavjud emas.",
+    "info": "Haddan tashqari yuk yoki davom etayotgan texnik xizmat tufayli server hozirda so‘rovni bajara olmayapti.",
+    "btn": "Bosh sahifaga qaytish"
+  }
+}

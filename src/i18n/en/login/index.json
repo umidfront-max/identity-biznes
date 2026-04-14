@@ -1,0 +1,20 @@
+{
+  "good_morning": "Good morning",
+  "good_afternoon": "Good afternoon",
+  "good_evening": "Good evening",
+  "good_night": "Good night",
+  "welcome": "Welcome",
+  "hey": "Hey",
+  "placeholders": {
+    "user_name": "User name",
+    "password": "Password"
+  },
+  "login": "Login",
+  "hello": "Hello!",
+  "welcome_to": "Welcome to ",
+  "messages": {
+    "incorrect_token_message": "The login interface is abnormal and token is not returned correctly...",
+    "user_name_cannot_be_empty": "The user name cannot be empty",
+    "password_cannot_be_less_than_6_digits": "The password cannot be less than 6 digits"
+  }
+}

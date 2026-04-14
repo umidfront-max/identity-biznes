@@ -1,0 +1,25 @@
+{
+  "fields": {
+    "passport_series": "Pasport seriyasi",
+    "passport_given_date": "Pasport berilgan sana",
+    "birth_date": "Tug'ilgan sana",
+    "pinfl": "JSHSHIR",
+    "first_name": "Ism",
+    "last_name": "Familiya",
+    "middle_name": "Otasining ismi",
+    "phone": "Telefon raqam",
+    "extra_phone": "Qo'shimcha telefon raqam",
+    "region_id": "Viloyat",
+    "district_id": "Tuman"
+  },
+  "placeholders": {
+    "birth_date": "Tug'ilgan sana",
+    "region": "Viloyat",
+    "district": "Tuman"
+  },
+  "avto_fill": "Avtomatik to'ldirish",
+  "messages": {
+    "fill_field": "Maydonni to'ldiring",
+    "enter_passport_series_and_numbers": "Pasport raqami va seriyasini kiriting"
+  }
+}

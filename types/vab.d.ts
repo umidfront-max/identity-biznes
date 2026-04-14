@@ -1,0 +1,15 @@
+declare module 'vite-plugin-unplugin'
+declare module 'vite-plugin-vitebar'
+declare module 'vue-json-viewer'
+declare module 'element-plus/dist/locale/en'
+declare module 'element-plus/dist/locale/ru'
+declare module '@kangc/v-md-editor'
+declare module '@kangc/v-md-editor/lib/theme/github'
+declare module 'intro.js'
+declare module 'vsv-icon'
+declare module 'vue3-gantt'
+declare module '@devindex/vue-mask'
+declare interface ElTab {
+  name: string
+  label: string
+}

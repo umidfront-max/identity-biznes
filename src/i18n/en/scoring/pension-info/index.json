@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "Pension info",
+    "single_title": "Single Pension info"
+  },
+  "fields": {
+    "status": "Status",
+    "fio": "FIO",
+    "pinfl": "PINFL",
+    "passport_series": "Passport Series",
+    "passport_number": "Passport Number",
+    "passport_given_date": "Passport Given Date",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "middle_name": "Middle Name",
+    "phone": "Phone",
+    "extra_phone": "Extra Phone",
+    "birth_date": "Birth Date",
+    "region_id": "Region",
+    "district_id": "District"
+  },
+  "created_successfully": "Pension information created successfully",
+  "create_new": "Create new pension information",
+  "placeholders": {
+    "birth_date": "Birth Date",
+    "region": "Region",
+    "district": "District"
+  },
+  "response": {
+    "title": "Response",
+    "address": "Address",
+    "apptype": "App Type",
+    "datepay": "Date Pay",
+    "datepens": "Date Pens",
+    "document": "Document",
+    "experience": "Experience",
+    "patronymlatin": "Middle name",
+    "pinpp": "PINPP",
+    "sum": "Sum",
+    "type": "Type"
+  },
+  "sum": {
+    "period": "Period",
+    "month": "Month",
+    "sum": "Sum"
+  },
+  "messages": {
+    "fill_field": "Fill in the field"
+  }
+}

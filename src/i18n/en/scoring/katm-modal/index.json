@@ -1,0 +1,25 @@
+{
+  "fields": {
+    "passport_series": "Passport Series",
+    "passport_given_date": "Passport Issue Date",
+    "birth_date": "Date of Birth",
+    "pinfl": "PINFL",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "middle_name": "Middle Name",
+    "phone": "Phone Number",
+    "extra_phone": "Additional Phone",
+    "region_id": "Region",
+    "district_id": "District"
+  },
+  "placeholders": {
+    "birth_date": "Date of Birth",
+    "region": "Region",
+    "district": "District"
+  },
+  "avto_fill": "Auto fill",
+  "messages": {
+    "fill_field": "Fill in the field",
+    "enter_passport_series_and_numbers": "Enter passport series and number"
+  }
+}

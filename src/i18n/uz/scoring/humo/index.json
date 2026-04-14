@@ -1,0 +1,21 @@
+{
+  "columns": {
+    "status": "Holat",
+    "card_number": "Karta raqami",
+    "card_expiry_date": "Kartaning amal qilish muddati",
+    "created_at": "Yaratilgan sana",
+    "updated_at": "O'zgartirilgan sana"
+  },
+  "messages": {
+    "fill_field": "Maydonni to'ldiring",
+    "card_number_is_16_characters": "karta raqami 16 belgidan iborat",
+    "card_added_successfully": "Karta muvaffaqiyatli qo'shildi"
+  },
+  "enter_card_number": "Karta raqamini kiriting",
+  "enter_card_expiry_date": "Kartaning amal qilish muddatini kiriting",
+  "report": "Hisobot",
+  "payment_info": "To'lov ma'lumotlari",
+  "total": "Jami",
+  "term": "Muddati",
+  "no_payments": "Bu kartadan hech qanday toʻlov yoʻq"
+}

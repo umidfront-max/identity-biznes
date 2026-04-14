@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Users",
+    "single_title": "Single user"
+  },
+  "fields": {
+    "username": "Nickname",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "status": "Status",
+    "phone": "Phone",
+    "password": "Password",
+    "password_confirmation": "Confirm Password"
+  },
+  "tabs": {
+    "role_info": "Role attachment",
+    "user_info": "User Info",
+    "change_password": "Change Password",
+    "change_theme": "Change Theme",
+    "user_devices": "User Devices"
+  },
+  "messages": {
+    "fill_field": "Fill in the field",
+    "character_more_than_7": "The number of characters must be more than 7."
+  },
+  "updated_successfully": "Updated Successfully",
+  "error": "Something went wrong",
+  "active": "Active",
+  "inactive": "Inactive",
+  "create_new": "Create new user"
+}

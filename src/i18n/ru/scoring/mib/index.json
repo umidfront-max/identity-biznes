@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "БПИ"
+  },
+  "fields": {
+    "status": "Статус",
+    "pinfl": "Пинфл",
+    "phone": "Номер телефона",
+    "debtBal": "Задолженность",
+    "created_at": "Дата создания",
+    "updated_at": "Дата посл. обновления"
+  },
+  "placeholders": {
+    "pinfl": "Введите пинфл"
+  },
+  "create_new": "Создать новый МИБ",
+  "created_successfully": "МИБ создано успешно",
+  "messages": {
+    "fill_field": "Заполните поле",
+    "must_be_12_characters": "должен состоять из 12 символов",
+    "must_be_14_characters": "должен состоять из 14 символов"
+  }
+}

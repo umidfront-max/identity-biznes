@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Kreditlar tarixi",
+    "single_title": "Bir kredit tarixi"
+  },
+  "created_successfully": "Kredit tarixi muvaffaqiyatli yaratildi",
+  "create_new_credit": "Yangi kredit tarixini yarating",
+  "fields": {
+    "fio": "F.I.O.",
+    "status": "Status",
+    "pinfl": "JSHSHIR",
+    "passport_series": "Pasport Seria",
+    "passport_number": "Passport Raqam",
+    "passport_given_date": "Pasport Berilgan Sana",
+    "first_name": "Ism",
+    "last_name": "Familia",
+    "middle_name": "Otasining ismi",
+    "phone": "Telefon",
+    "extra_phone": "Qo'shimcha Telefon",
+    "birth_date": "Tug'ilgan sana",
+    "region_id": "Viloyat",
+    "district_id": "Tuman",
+    "created_at": "Yaratilgan sana",
+    "updated_at": "O'zgartirilgan sana"
+  },
+  "placeholders": {
+    "birth_date": "Tug'ilgan sana",
+    "region": "Viloyat",
+    "district": "Tuman"
+  },
+  "response": {
+    "title": "Javob",
+    "fio": "F.I.O.",
+    "birth_date": "Tug'ilgan sana",
+    "score_level": "Baholash darajasi",
+    "score_date": "Baholash sanasi",
+    "document_type": "Hujjat turi",
+    "document_serial": "Hujjatlar serialari",
+    "document_number": "Hujjatlar raqamlari",
+    "address": "Adres",
+    "pinfl": "JSHSHIR",
+    "inn": "STIR",
+    "resident": "Rezident"
+  },
+  "score": {
+    "title": "Baholar",
+    "score_point": "Hisoblash balli:",
+    "score_class": "Baho klasi:",
+    "score_date": "Shakllanish vaqti:"
+  },
+  "extra_info": {
+    "title": "QO'SHIMCHA MA'LUMOT",
+    "columns": {
+      "name": "NOMLASH",
+      "opened": "OCHIQ",
+      "closed": "YOPIQ",
+      "count": "HAJM",
+      "sum": "SUMMA"
+    }
+  },
+  "columns": {
+    "types_responsibility": "Barcha turdagi javobgarlik",
+    "contracts_without_delay": "Bitta kechikishsiz shartnomalar",
+    "overdue_interest": "Muddati o'tgan foizlar",
+    "revised": "Qayta ko'rib chiqilgan",
+    "overdue_up_to_30_days": "30 kungacha kechiktirilgan",
+    "overdue_over_next_month": "Kechiktirilgan to'lovlar keyingi oyga o'tkaziladi",
+    "overdue_from_30_to_60_days": "30 kundan 60 kungacha kechiktirilgan",
+    "overdue_from_60_to_90_days": "60 kundan 90 kungacha kechiktirilgan",
+    "overdue_from_90_or_more": "90 kun yoki undan ortiq kechikishlar",
+    "judicial": "Sudlanganlar",
+    "written_on_principal_debts": "Asosiy qarzlar bo'yicha hisobdan chiqarilgan",
+    "off_balance_sheet_interest_debts": "Balansdan tashqari foizli qarzlar",
+    "alert": "Ogohlantirish"
+  }
+}

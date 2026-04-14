@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Branches",
+    "single_title": "Single branch"
+  },
+  "fields": {
+    "name": "Name",
+    "address": "Address",
+    "inn": "INN",
+    "created_at": "Created at",
+    "updated_at": "Updated at"
+  },
+  "messages": {
+    "enter_name": "Please, enter a name",
+    "enter_percent": "Please, enter a percent",
+    "enter_min_amount": "Please, enter a min amount"
+  },
+  "create_new": "Create new branch"
+}

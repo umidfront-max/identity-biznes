@@ -1,0 +1,18 @@
+{
+  "columns": {
+    "event": "Событие",
+    "subject_type": "Тип объекта",
+    "subject_id": "ID объекта",
+    "fio": "ФИО",
+    "created_at": "Создано в",
+    "updated_at": "Обновлено в",
+    "name": "Название",
+    "attributes_name": "Название аттрибута",
+    "old_name": "Старое название",
+    "username": "Имя пользователя",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "phone": "Телефон номер",
+    "status": "Статус"
+  }
+}

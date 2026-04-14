@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Credit history",
+    "single_title": "Single credit history"
+  },
+  "created_successfully": "Credit history created successfully",
+  "create_new_credit": "Create new credit history",
+  "fields": {
+    "fio": "FIO",
+    "status": "Status",
+    "pinfl": "PINFL",
+    "passport_series": "Passport Series",
+    "passport_number": "Passport Number",
+    "passport_given_date": "Passport Given Date",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "middle_name": "Middle Name",
+    "phone": "Phone Number",
+    "extra_phone": "Extra Phone Number",
+    "birth_date": "Birth Date",
+    "region_id": "Region",
+    "district_id": "District",
+    "created_at": "Created at",
+    "updated_at": "Updated at"
+  },
+  "placeholders": {
+    "birth_date": "Birth Date",
+    "region": "Region",
+    "district": "District"
+  },
+  "response": {
+    "title": "Response",
+    "fio": "FIO",
+    "birth_date": "Birth Date",
+    "score_level": "Score Level",
+    "score_date": "Score Date",
+    "document_type": "Document Type",
+    "document_serial": "Document Serial",
+    "document_number": "Document Number",
+    "address": "Address",
+    "pinfl": "PINFL",
+    "inn": "INN",
+    "resident": "Resident"
+  },
+  "score": {
+    "title": "Score",
+    "score_point": "Score points:",
+    "score_class": "Score class:",
+    "score_date": "Score date:"
+  },
+  "extra_info": {
+    "title": "EXTRA INFORMATION",
+    "columns": {
+      "name": "NAME",
+      "opened": "OPENED",
+      "closed": "CLOSED",
+      "count": "COUNT",
+      "sum": "SUM"
+    }
+  },
+  "columns": {
+    "types_responsibility": "All types of responsibility",
+    "contracts_without_delay": "Contracts without a single delay",
+    "overdue_interest": "Overdue interest",
+    "revised": "Revised",
+    "overdue_up_to_30_days": "Overdue up to 30 days",
+    "overdue_over_next_month": "Overdue payments carried over to the next month",
+    "overdue_from_30_to_60_days": "Overdue from 30 to 60 days",
+    "overdue_from_60_to_90_days": "Overdue from 60 to 90 days",
+    "overdue_from_90_or_more": "Delays of 90 days or more",
+    "judicial": "Judicial",
+    "written_on_principal_debts": "Written off on principal debts",
+    "off_balance_sheet_interest_debts": "Off-balance sheet interest debts",
+    "alert": "Alert"
+  }
+}

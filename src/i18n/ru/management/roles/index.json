@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Роли",
+    "single_title": "Роль"
+  },
+  "fields": {
+    "name": "Название"
+  },
+  "create_new": "Создать новую роль",
+  "updated_successfully": "Роль успешно обновлена",
+  "messages": {
+    "enter_name": "Введите название",
+    "enter_percent": "Введите процент",
+    "enter_min_amount": "Введите минимальную сумму"
+  }
+}

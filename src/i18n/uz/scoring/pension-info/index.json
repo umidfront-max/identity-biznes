@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "Pensiya ma'lumotlari",
+    "single_title": "Pensiya ma'lumoti"
+  },
+  "fields": {
+    "status": "Holat",
+    "fio": "F.I.O.",
+    "pinfl": "JSHSHIR",
+    "passport_series": "Pasport seriyasi",
+    "passport_number": "Pasport raqami",
+    "passport_given_date": "Pasport berilgan sana",
+    "first_name": "Ism",
+    "last_name": "Familiya",
+    "middle_name": "Otasining ismi",
+    "phone": "Telefon",
+    "extra_phone": "Qo'shimcha telefon",
+    "birth_date": "Tug'ilgan sana",
+    "region_id": "Viloyat",
+    "district_id": "Tuman"
+  },
+  "created_successfully": "Pensiya ma'lumoti muvaffaqiyatli yaratildi",
+  "create_new": "Yangi pensiya ma'lumoti yaratish",
+  "placeholders": {
+    "birth_date": "Tug'ilgan sana",
+    "region": "Viloyat",
+    "district": "Tuman"
+  },
+  "response": {
+    "title": "Javob",
+    "address": "Manzil",
+    "apptype": "Ariza turi",
+    "datepay": "To'lov sanasi",
+    "datepens": "Pensiya sanasi",
+    "document": "Hujjat",
+    "experience": "Ish tajribasi",
+    "patronymlatin": "Otasining ismi",
+    "pinpp": "PINPP",
+    "sum": "Summa",
+    "type": "Turi"
+  },
+  "sum": {
+    "period": "Davr",
+    "month": "Oy",
+    "sum": "Summa"
+  },
+  "messages": {
+    "fill_field": "Maydonni to'ldiring"
+  }
+}

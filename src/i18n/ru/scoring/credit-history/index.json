@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "История кредитов",
+    "single_title": "Истрия одного кредита"
+  },
+  "created_successfully": "История кредита успешно создана",
+  "create_new_credit": "Создать новую историю кредита",
+  "fields": {
+    "fio": "Ф.И.О.",
+    "status": "Статус",
+    "pinfl": "Пинфл",
+    "passport_series": "Серия паспорта",
+    "passport_number": "Номер паспорта",
+    "passport_given_date": "Дата выдачи паспорта",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "middle_name": "Отчество",
+    "phone": "Номер телефона",
+    "extra_phone": "Доп. номер телефона",
+    "birth_date": "Дата рождения",
+    "region_id": "Регион/Область",
+    "district_id": "Район",
+    "created_at": "Дата создания",
+    "updated_at": "Дата посл. обновления"
+  },
+  "placeholders": {
+    "birth_date": "Дата рождения",
+    "region": "Область",
+    "district": "Район"
+  },
+  "response": {
+    "title": "Ответ",
+    "fio": "Ф.И.О.",
+    "birth_date": "Дата рождения",
+    "score_level": "Уровень оценки",
+    "score_date": "Дата оценки",
+    "document_type": "Тип документа",
+    "document_serial": "Серия документа",
+    "document_number": "Номер документа",
+    "address": "Адрес",
+    "pinfl": "Пинфл",
+    "inn": "ИНН",
+    "resident": "Резидент"
+  },
+  "score": {
+    "title": "Оценки",
+    "score_point": "Скоринговый балл:",
+    "score_class": "Класс оценки:",
+    "score_date": "Время формирования:"
+  },
+  "extra_info": {
+    "title": "ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ",
+    "columns": {
+      "name": "НАИМЕНОВАНИЕ",
+      "opened": "ОТКРЫТЫЕ",
+      "closed": "ЗАКРЫТЫЕ",
+      "count": "КОЛИЧЕСТВО",
+      "sum": "СУММА"
+    }
+  },
+  "columns": {
+    "types_responsibility": "Все виды ответственности",
+    "contracts_without_delay": "Договора без единой просрочки",
+    "overdue_interest": "Просроченные проценты",
+    "revised": "Пересмотренные",
+    "overdue_up_to_30_days": "Просрочки до 30 дней",
+    "overdue_over_next_month": "Просрочки, переходящие на следующий месяц",
+    "overdue_from_30_to_60_days": "Просрочки от 30 до 60 дней",
+    "overdue_from_60_to_90_days": "Просрочки от 60 до 90 дней",
+    "overdue_from_90_or_more": "Просрочки от 90 дней и более",
+    "judicial": "Судебные",
+    "written_on_principal_debts": "Списанные по основным долгам",
+    "off_balance_sheet_interest_debts": "Внебалансовые задолженности по процентам",
+    "alert": "Оповещение"
+  }
+}

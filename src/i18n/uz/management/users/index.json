@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Foydalanuvchilar",
+    "single_title": "Foydalanuvchi"
+  },
+  "fields": {
+    "username": "Taxallus",
+    "first_name": "Ism",
+    "last_name": "Familia",
+    "status": "Status",
+    "phone": "Telefon",
+    "password": "Parol",
+    "password_confirmation": "Parolni tastiqlang"
+  },
+  "tabs": {
+    "role_info": "Role biriktirish",
+    "user_info": "Foydalanuvchi ma'lumotlari",
+    "change_password": "Parolni o'zgartirish",
+    "change_theme": "Mavzuni o'zgartirish",
+    "user_devices": "Foydalanuvchi qurilmalari"
+  },
+  "messages": {
+    "fill_field": "Maydonni to'ldiring",
+    "character_more_than_7": "Belgilar soni 7 dan ortiq bo'lishi kerak."
+  },
+  "updated_successfully": "Muvaffaqiyatli yangilandi",
+  "error": "Nimadir noto'g'ri bajarildi",
+  "active": "Faol",
+  "inactive": "Faol emas",
+  "create_new": "Yangi foydalanuvchi yarating"
+}

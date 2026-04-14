@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "Истории ИНПС",
+    "single_title": "История ИНПС"
+  },
+  "columns": {
+    "status": "Статус",
+    "pinfl": "Пинфл",
+    "passport_series": "Серия паспорта",
+    "passport_number": "Номер паспорта",
+    "passport_given_date": "Дата выдачи паспорта",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "middle_name": "Отчество",
+    "phone": "Номер телефона",
+    "extra_phone": "Доп. номер телефона",
+    "birth_date": "Дата рождения",
+    "region_id": "Регион/Область",
+    "district_id": "Район/Округ",
+    "fio": "Ф.И.О.",
+    "created_at": "Дата создания",
+    "updated_at": "Дата посл. обновления"
+  },
+  "inps_successfully": "История ИНПС успешно создана",
+  "presence_report": {
+    "title": "Отчет о присутствии",
+    "presence": "Присутствие",
+    "report_name": "Имя отчета"
+  },
+  "incomes": {
+    "title": "Доходы",
+    "period": "Период",
+    "orgname": "Название орг.",
+    "org_inn": "ИНН орг.",
+    "income_summa": "Сумма доходов",
+    "inps_summa": "Сумма нпс",
+    "send_date": "Дата оправки"
+  },
+  "incomes_period": {
+    "title": "Период доходов",
+    "incomes_all_summa": "Сумма всего дохода",
+    "incomes_period_begin": "Начальный период дохода",
+    "incomes_period_end": "Конечный период дохода"
+  }
+}

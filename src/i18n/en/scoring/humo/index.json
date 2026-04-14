@@ -1,0 +1,21 @@
+{
+  "columns": {
+    "status": "Status",
+    "card_number": "Card Number",
+    "card_expiry_date": "Card Expiry Date",
+    "created_at": "Created at",
+    "updated_at": "Updated at"
+  },
+  "messages": {
+    "fill_field": "Fill in the field",
+    "card_number_is_16_characters": "card number is 16 characters",
+    "card_added_successfully": "The card was added successfully"
+  },
+  "enter_card_number": "Enter card number",
+  "enter_card_expiry_date": "Enter card expiration date",
+  "report": "Report",
+  "payment_info": "Payment information",
+  "total": "Total",
+  "term": "Term",
+  "no_payments": "There are no payments from this card"
+}

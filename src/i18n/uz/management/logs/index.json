@@ -1,0 +1,18 @@
+{
+  "columns": {
+    "event": "Holat",
+    "subject_type": "Obyekt turi",
+    "subject_id": "Obyekt IDsi",
+    "fio": "FIO",
+    "created_at": "Yaratilgan",
+    "updated_at": "Yangilangan",
+    "name": "Nomi",
+    "attributes_name": "Atribut nomi",
+    "old_name": "Eski nomi",
+    "username": "Foydalanuvchi ismi",
+    "first_name": "Ism",
+    "last_name": "Familiya",
+    "phone": "Telefon raqam",
+    "status": "Status"
+  }
+}
