@@ -11,8 +11,8 @@ export const cliConfig: { [key: string]: string | number | boolean | Array<strin
   assetsDir: 'static',
   // Development environment port number
   port: 5173,
-  // pwa
-  pwa: true,
+  // pwa - disabled to avoid stale service worker caching broken builds on Vercel
+  pwa: false,
   // pwaDev
   pwaDev: false,
   // Specify the chunk size that triggers warnings when building. (in kbs)

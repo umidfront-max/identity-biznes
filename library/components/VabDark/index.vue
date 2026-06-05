@@ -5,8 +5,8 @@
     :title="mode === 'dark' ? 'Light mode' : 'Dark mode'"
     @click="_toggleDark($event)"
   >
-    <vab-icon v-if="mode === 'dark'" icon="sun-fill" />
-    <vab-icon v-else icon="moon-fill" />
+    <vab-icon v-if="mode === 'dark'" icon="sun-fill" style="color: #f59e0b" />
+    <vab-icon v-else icon="moon-fill" style="color: #111111" />
   </button>
 </template>
 

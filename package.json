@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "author": "umidfront-max",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "dev:vue-tsc": "vue-tsc --noEmit && vite",
