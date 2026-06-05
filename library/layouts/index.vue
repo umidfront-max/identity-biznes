@@ -19,13 +19,11 @@ interface ComponentType {
   default: Component
 }
 
-const $baseNotify = inject<any>('$baseNotify')
 const settingsStore = useSettingsStore()
 const { device, collapse, theme } = storeToRefs(settingsStore)
 const { toggleDevice, foldSideBar, openSideBar, updateTheme } = settingsStore
 const mobile = ref(false)
 let oldLayout = theme.value.layout
-const visibility = useDocumentVisibility()
 const imports = import.meta.glob<ComponentType>('./**/*.vue', { eager: true })
 const Components: Record<string, Component> = {}
 Object.getOwnPropertyNames(imports).forEach((key: any) => {
@@ -59,10 +57,6 @@ onBeforeMount(() => {
 onBeforeUnmount(() => {
   if (mobile) theme.value.layout = oldLayout
   window.removeEventListener('resize', resizeBody)
-})
-
-watch(visibility, (current, previous) => {
-  if (current === 'visible' && previous === 'hidden') $baseNotify(`Welcome back`, '', 'success', 'bottom-right')
 })
 </script>
 

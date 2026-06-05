@@ -1,6 +1,7 @@
 /**
  * @description Import all vuex modules and automatically add namespaced:true to resolve vuex naming conflicts. Please do not modify them.
  */
+import { createPinia } from 'pinia'
 import type { App } from 'vue'
 
 const pinia = createPinia()

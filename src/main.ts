@@ -2,6 +2,7 @@ import App from './App.vue'
 
 import VueMask from '@devindex/vue-mask'
 import ElementPlus from 'element-plus'
+import { createApp } from 'vue'
 import { setupVab } from '~/library'
 import { i18n } from '/@/i18n'
 import { setupRouter } from '/@/router'
