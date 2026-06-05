@@ -150,3 +150,292 @@ html.dark > body[class*='vab-theme-'] {
     border-right: none !important;
   }
 }
+
+/* ============================================================
+   DARK MODE — overrides for minimal redesign
+   ============================================================ */
+
+html.dark {
+  /* Global background */
+  body {
+    background: #0f1115 !important;
+    color: #e5e7eb !important;
+  }
+
+  /* ---- Logo ---- */
+  .vab-logo {
+    background: #171a21 !important;
+    border-bottom-color: #262a35 !important;
+  }
+  .brand-title {
+    color: #f3f4f6 !important;
+  }
+
+  /* ---- Sidebar (VabColumnBar) ---- */
+  .vab-column-bar {
+    background: #171a21 !important;
+    border-right-color: #262a35 !important;
+  }
+  .el-tabs__header.is-left .el-tabs__nav-wrap.is-left {
+    background: #0f1115 !important;
+    border-right-color: #262a35 !important;
+  }
+  .vab-column-bar .el-tabs__item .vab-column-grid {
+    color: #9ca3af !important;
+  }
+  .vab-column-bar .el-tabs__item .vab-column-grid svg,
+  .vab-column-bar .el-tabs__item .vab-column-grid i,
+  .vab-column-bar .el-tabs__item .vab-column-grid span,
+  .vab-column-bar .el-tabs__item .vab-column-grid .menu-title {
+    color: #9ca3af !important;
+  }
+  .vab-column-bar .el-tabs__item .vab-column-grid:hover {
+    background: rgba(37, 99, 235, 0.15) !important;
+  }
+  .vab-column-bar .el-tabs__item .vab-column-grid:hover svg,
+  .vab-column-bar .el-tabs__item .vab-column-grid:hover i,
+  .vab-column-bar .el-tabs__item .vab-column-grid:hover span,
+  .vab-column-bar .el-tabs__item .vab-column-grid:hover .menu-title {
+    color: #60a5fa !important;
+  }
+
+  .el-menu-item,
+  .el-sub-menu__title {
+    color: #d1d5db !important;
+    background: transparent !important;
+  }
+  .el-menu-item:hover,
+  .el-sub-menu__title:hover {
+    color: #60a5fa !important;
+    background: rgba(37, 99, 235, 0.15) !important;
+  }
+  .el-menu-item.is-active {
+    color: #60a5fa !important;
+    background: rgba(37, 99, 235, 0.2) !important;
+  }
+
+  /* ---- Top nav (header) ---- */
+  .vab-nav {
+    background: #171a21 !important;
+    border-bottom-color: #262a35 !important;
+  }
+  .vab-nav .left-panel .fold-unfold {
+    color: #d1d5db !important;
+  }
+  .vab-nav .left-panel .fold-unfold:hover {
+    color: #ffffff !important;
+    background: #262a35 !important;
+  }
+
+  /* ---- Breadcrumb ---- */
+  .vab-breadcrumb .el-breadcrumb__item .el-breadcrumb__inner,
+  .vab-breadcrumb .el-breadcrumb__item .el-breadcrumb__inner.is-link {
+    color: #9ca3af !important;
+  }
+  .vab-breadcrumb .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+    color: #f3f4f6 !important;
+  }
+  .vab-breadcrumb .el-breadcrumb__item .el-breadcrumb__separator {
+    color: #4b5563 !important;
+  }
+
+  /* ---- Containers ---- */
+  [class*='-container'],
+  .no-background-container {
+    background: #171a21 !important;
+    border-color: #262a35 !important;
+  }
+
+  /* ---- Tables ---- */
+  .custom-table-container .el-table {
+    background: #171a21 !important;
+    border-color: #262a35 !important;
+
+    --el-table-border-color: #262a35;
+    --el-table-header-bg-color: #1f2330;
+    --el-table-row-hover-bg-color: #1f2330;
+    --el-table-tr-bg-color: #171a21;
+    --el-table-bg-color: #171a21;
+  }
+  .custom-table-container .el-table th.el-table__cell {
+    background: #1f2330 !important;
+  }
+  .custom-table-container .el-table th.el-table__cell .cell {
+    color: #9ca3af !important;
+  }
+  .custom-table-container .el-table td.el-table__cell .cell {
+    color: #e5e7eb !important;
+  }
+  .custom-table-container .el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+    background: #1a1e29 !important;
+  }
+  .custom-table-container .el-table td.el-table__cell,
+  .custom-table-container .el-table th.el-table__cell {
+    border-color: #262a35 !important;
+  }
+
+  /* Table right tools (refresh, fullscreen, density) */
+  .custom-table-container .custom-table-right-tools > .el-button,
+  .custom-table-container .custom-table-right-tools .el-popover__reference .el-button {
+    background: #1f2330 !important;
+    border-color: #262a35 !important;
+    color: #d1d5db !important;
+  }
+  .custom-table-container .custom-table-right-tools > .el-button [class*='ri-'],
+  .custom-table-container .custom-table-right-tools .el-popover__reference .el-button [class*='ri-'] {
+    color: #d1d5db !important;
+  }
+  .custom-table-container .custom-table-right-tools > .el-button:hover,
+  .custom-table-container .custom-table-right-tools .el-popover__reference .el-button:hover {
+    background: rgba(37, 99, 235, 0.2) !important;
+    border-color: rgba(37, 99, 235, 0.4) !important;
+    color: #60a5fa !important;
+  }
+
+  /* Search input */
+  .custom-table-container .el-form-item .el-input__wrapper {
+    background: #1f2330 !important;
+    box-shadow: 0 0 0 1px #262a35 !important;
+  }
+  .custom-table-container .el-input__inner {
+    color: #e5e7eb !important;
+  }
+  .custom-table-container .el-input__inner::placeholder {
+    color: #6b7280 !important;
+  }
+
+  /* Pagination */
+  .custom-table-container .el-pagination .el-pagination__total,
+  .custom-table-container .el-pagination .el-pagination__jump {
+    color: #9ca3af !important;
+  }
+  .custom-table-container .el-pagination.is-background .btn-prev,
+  .custom-table-container .el-pagination.is-background .btn-next,
+  .custom-table-container .el-pagination.is-background .el-pager li {
+    background: #1f2330 !important;
+    border-color: #262a35 !important;
+    color: #d1d5db !important;
+  }
+  .custom-table-container .el-pagination.is-background .el-pager li.is-active {
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #ffffff !important;
+  }
+  .custom-table-container .el-pagination .el-input__wrapper {
+    background: #1f2330 !important;
+    box-shadow: 0 0 0 1px #262a35 !important;
+  }
+
+  /* ---- Right header tools (chips) ---- */
+  .lang-btn,
+  .dark-toggle,
+  .notice-btn {
+    background: #1f2330 !important;
+  }
+  .lang-code,
+  .lang-chevron {
+    color: #f3f4f6 !important;
+  }
+  .dark-toggle :deep([class*='ri-']),
+  .dark-toggle [class*='ri-'] {
+    color: #fbbf24 !important;
+  }
+  .notice-btn :deep([class*='ri-']),
+  .notice-btn [class*='ri-'] {
+    color: #f3f4f6 !important;
+  }
+  .lang-btn:hover,
+  .dark-toggle:hover,
+  .notice-btn:hover {
+    background: #2a2f3e !important;
+  }
+
+  /* Avatar dropdown */
+  .avatar-dropdown:hover {
+    background: #1f2330 !important;
+  }
+  .username-info h3 {
+    color: #f3f4f6 !important;
+  }
+  .username-info p {
+    color: #9ca3af !important;
+  }
+  .vab-dropdown {
+    color: #d1d5db !important;
+  }
+
+  /* ---- Tabs (browser-like top tab bar) ---- */
+  .vab-tabs {
+    background: #171a21 !important;
+    border-bottom-color: #262a35 !important;
+  }
+  .vab-tabs-content-card .el-tabs__header .el-tabs__item {
+    color: #9ca3af !important;
+    background: transparent !important;
+    border-color: transparent !important;
+  }
+  .vab-tabs-content-card .el-tabs__header .el-tabs__item:hover {
+    color: #f3f4f6 !important;
+    background: #1f2330 !important;
+  }
+  .vab-tabs-content-card .el-tabs__header .el-tabs__item.is-active {
+    color: #f3f4f6 !important;
+    background: #1f2330 !important;
+    border-color: #262a35 !important;
+  }
+
+  /* ---- Form inputs in modals ---- */
+  .el-dialog {
+    background: #171a21 !important;
+    border: 1px solid #262a35;
+  }
+  .el-dialog__title,
+  .el-dialog__header,
+  .el-form-item__label {
+    color: #f3f4f6 !important;
+  }
+  .el-input__wrapper {
+    background: #1f2330 !important;
+    box-shadow: 0 0 0 1px #262a35 !important;
+  }
+  .el-input__wrapper.is-focus {
+    box-shadow: 0 0 0 1.5px #2563eb !important;
+  }
+  .el-input__inner {
+    color: #e5e7eb !important;
+  }
+  .el-input__inner::placeholder {
+    color: #6b7280 !important;
+  }
+
+  /* Plain button in dark */
+  .el-button:not([class*='el-button--']) {
+    background: #1f2330 !important;
+    border-color: #262a35 !important;
+    color: #d1d5db !important;
+  }
+  .el-button:not([class*='el-button--']):hover {
+    background: rgba(37, 99, 235, 0.2) !important;
+    border-color: rgba(37, 99, 235, 0.4) !important;
+    color: #60a5fa !important;
+  }
+
+  /* Dropdown menus */
+  .el-dropdown__popper,
+  .el-popper {
+    background: #1f2330 !important;
+    border: 1px solid #262a35 !important;
+  }
+  .el-dropdown-menu {
+    background: #1f2330 !important;
+  }
+  .el-dropdown-menu__item {
+    color: #e5e7eb !important;
+  }
+  .el-dropdown-menu__item:hover {
+    background: #2a2f3e !important;
+    color: #60a5fa !important;
+  }
+
+  /* Float fold button (sidebar collapse) - already gradient, keep */
+}

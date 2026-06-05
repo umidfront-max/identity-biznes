@@ -1,13 +1,11 @@
 <template>
   <el-dropdown @command="handleCommand" @visible-change="handleVisibleChange">
     <span class="avatar-dropdown">
-      <el-avatar class="user-avatar" :src="_profileStore.avatar?.preview_link || './static/svg/avatar.svg'" />
+      <span class="avatar-mark">{{ initials }}</span>
       <div class="username">
-        <div>
-          <h3 class="">
-            {{ _profileStore.last_name + ' ' + _profileStore.first_name }}
-          </h3>
-          <p class="">{{ _profileStore.username }}</p>
+        <div class="username-info">
+          <h3>{{ _profileStore.last_name + ' ' + _profileStore.first_name }}</h3>
+          <p>{{ _profileStore.username }}</p>
         </div>
         <vab-icon class="vab-dropdown" :class="{ 'vab-dropdown-active': active }" icon="arrow-down-s-line" />
       </div>
@@ -34,6 +32,12 @@ defineOptions({
 const router = useRouter()
 const active = ref<boolean>(false)
 
+const initials = computed(() => {
+  const f = _profileStore.value?.first_name?.[0] || ''
+  const l = _profileStore.value?.last_name?.[0] || ''
+  return (f + l).toUpperCase() || 'U'
+})
+
 const handleVisibleChange = (value: boolean) => {
   active.value = value
 }
@@ -52,51 +56,68 @@ const handleCommand = async (command: any) => {
 <style lang="scss" scoped>
 .avatar-dropdown {
   display: flex;
-  align-content: center;
   align-items: center;
-  justify-content: center;
-  justify-items: center;
+  gap: 10px;
+  padding: 4px 10px 4px 4px;
+  margin-left: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
 
-  .user-avatar {
-    box-sizing: border-box;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    margin-left: 15px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
-  .username {
-    position: relative;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    width: max-content;
-    height: 40px;
-    margin-left: 6px;
-    line-height: 40px;
-    cursor: pointer;
-
-    [class*='ri-'] {
-      margin-left: 0 !important;
-    }
+  &:hover {
+    background: #f3f4f6;
   }
 }
 
-// custom style
+.avatar-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
 .username {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.username-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+
   h3 {
-    margin: 16px 0px 8px 0px !important;
-    margin-top: 1px;
-    font-size: 12px;
+    margin: 0;
+    font-size: 13px;
     font-weight: 600;
-    line-height: 10px !important;
+    color: #111;
+    letter-spacing: -0.1px;
   }
+
   p {
-    margin-top: 4px !important;
-    font-size: 12px;
-    line-height: 10px !important;
+    margin: 2px 0 0;
+    font-size: 11px;
+    color: #6b7280;
   }
+}
+
+:deep(.vab-dropdown) {
+  margin-left: 4px !important;
+  font-size: 16px;
+  color: #1f2937 !important;
+  transition: transform 0.2s ease;
+}
+
+:deep(.vab-dropdown-active) {
+  transform: rotate(180deg);
 }
 </style>

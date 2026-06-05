@@ -71,12 +71,12 @@ const handleTabClick = () => {
   display: flex;
   justify-content: space-between;
   height: var(--el-nav-height);
-  padding-right: var(--el-padding);
-  padding-left: var(--el-padding);
+  padding-right: 24px;
+  padding-left: 24px;
   overflow: hidden;
   user-select: none;
-  background: var(--el-color-white);
-  border-bottom: 1px solid var(--el-border-color);
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
 
   .left-panel {
     display: flex;
@@ -86,7 +86,18 @@ const handleTabClick = () => {
 
     :deep() {
       .fold-unfold {
-        margin-right: var(--el-margin);
+        margin-right: 16px;
+        padding: 8px;
+        font-size: 18px;
+        color: #6b7280;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        &:hover {
+          color: #111;
+          background: #f3f4f6;
+        }
       }
 
       .el-tabs {
@@ -133,22 +144,6 @@ const handleTabClick = () => {
     justify-content: flex-end;
     height: var(--el-nav-height);
     transition: var(--el-transition);
-
-    :deep() {
-      [class*='ri-'] {
-        margin-left: var(--el-margin);
-        color: var(--el-color-grey);
-        cursor: pointer;
-      }
-
-      button {
-        [class*='ri-'] {
-          margin-left: 0;
-          color: var(--el-color-white);
-          cursor: pointer;
-        }
-      }
-    }
   }
 
   @media (max-width: 450px) {

@@ -1,21 +1,18 @@
 <template>
-  <el-switch
+  <button
     v-if="'technology' != theme.themeName && 'plain' != theme.themeName && route.path !== '/goods/posterDesign'"
-    v-model="mode"
-    :active-icon="Moon"
-    active-value="dark"
-    class="vab-dark"
-    :inactive-icon="Sunny"
-    inactive-value="light"
-    inline-prompt
+    class="dark-toggle"
+    :title="mode === 'dark' ? 'Light mode' : 'Dark mode'"
     @click="_toggleDark($event)"
-  />
+  >
+    <vab-icon v-if="mode === 'dark'" icon="sun-fill" />
+    <vab-icon v-else icon="moon-fill" />
+  </button>
 </template>
 
 <script lang="ts" setup>
 // @ts-nocheck
 
-import { Moon, Sunny } from '@element-plus/icons-vue'
 import { useSettingsStore } from '/@/store/modules/settings'
 
 defineOptions({
@@ -115,7 +112,52 @@ onBeforeMount(() => {
   }
 }
 
-.vab-dark {
-  margin-left: var(--el-margin);
+.dark-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 10px;
+  color: #111111;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dark-toggle :deep([class*='ri-']) {
+  font-size: 18px;
+  margin: 0 !important;
+}
+
+/* Moon icon — dark for light-mode chip */
+.dark-toggle :deep(.ri-moon-fill),
+.dark-toggle :deep(.ri-moon-line) {
+  color: #111111 !important;
+}
+
+/* Sun icon — warm amber/orange regardless of mode */
+.dark-toggle :deep(.ri-sun-fill),
+.dark-toggle :deep(.ri-sun-line) {
+  color: #f59e0b !important;
+}
+
+.dark-toggle:hover {
+  background: #e5e7eb;
+}
+
+.dark .dark-toggle {
+  background: #1f2937;
+}
+
+.dark .dark-toggle :deep(.ri-sun-fill),
+.dark .dark-toggle :deep(.ri-sun-line) {
+  color: #fbbf24 !important; /* slightly lighter amber on dark chip */
+}
+
+.dark .dark-toggle:hover {
+  background: #374151;
 }
 </style>

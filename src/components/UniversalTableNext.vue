@@ -281,37 +281,265 @@ watch(
 
 <style lang="scss" scoped>
 .refresh-line {
-  color: rgb(242, 205, 43);
+  color: #2563eb;
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-.check-line {
-  color: green;
-}
-.close-line {
-  color: red;
-}
+
+.check-line { color: #10b981; }
+.close-line { color: #ef4444; }
+
 .custom-table-container {
   .custom-table-right-tools {
     display: flex;
     align-items: center;
+    gap: 8px;
   }
 }
 </style>
+
 <style lang="scss">
-.light {
-  .el-table--default .cell {
-    color: black;
-  }
-  .cell span {
-    color: #0f172a;
-  }
+/* ---- Search input ---- */
+.custom-table-container .el-form-item .el-input__wrapper {
+  height: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #ececec;
+  transition: box-shadow 0.15s ease;
+}
+.custom-table-container .el-form-item .el-input__wrapper:hover {
+  box-shadow: 0 0 0 1px #d1d5db;
+}
+.custom-table-container .el-form-item .el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1.5px #2563eb !important;
+}
+
+/* ---- Filter (blue) button in the form ---- */
+.custom-table-container .el-form .el-button--primary {
+  height: 40px;
+  padding: 0 20px !important;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25) !important;
+  transition: all 0.15s ease !important;
+}
+.custom-table-container .el-form .el-button--primary:hover {
+  background: #1d4ed8 !important;
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35) !important;
+}
+
+/* ---- Right tools (refresh, fullscreen, density) ---- */
+.custom-table-container .custom-table-right-tools > .el-button,
+.custom-table-container .custom-table-right-tools .el-popover__reference .el-button {
+  width: 40px;
+  height: 40px;
+  padding: 0 !important;
+  background: #ffffff !important;
+  border: 1px solid #ececec !important;
+  border-radius: 10px !important;
+  color: #4b5563 !important;
+  box-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+.custom-table-container .custom-table-right-tools > .el-button [class*='ri-'],
+.custom-table-container .custom-table-right-tools .el-popover__reference .el-button [class*='ri-'] {
+  font-size: 18px;
+  margin: 0 !important;
+  color: #4b5563;
+}
+.custom-table-container .custom-table-right-tools > .el-button:hover,
+.custom-table-container .custom-table-right-tools .el-popover__reference .el-button:hover {
+  color: #2563eb !important;
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+}
+.custom-table-container .custom-table-right-tools > .el-button:hover [class*='ri-'],
+.custom-table-container .custom-table-right-tools .el-popover__reference .el-button:hover [class*='ri-'] {
+  color: #2563eb;
+}
+
+/* ---- Add (solid blue) button ---- */
+.custom-table-container .custom-table-right-tools .el-button--primary {
+  width: auto !important;
+  height: 40px !important;
+  padding: 0 22px !important;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: #2563eb !important;
+  border: 1px solid #2563eb !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3) !important;
+}
+.custom-table-container .custom-table-right-tools .el-button--primary img {
+  filter: brightness(0) invert(1);
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+.custom-table-container .custom-table-right-tools .el-button--primary:hover {
+  background: #1d4ed8 !important;
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* ---- Delete (red, when rows selected) ---- */
+.custom-table-container .custom-table-right-tools .el-button--danger {
+  width: auto !important;
+  height: 40px !important;
+  padding: 0 22px !important;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: #ef4444 !important;
+  border: 1px solid #ef4444 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(239, 68, 68, 0.3) !important;
+}
+.custom-table-container .custom-table-right-tools .el-button--danger img {
+  filter: brightness(0) invert(1);
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+.custom-table-container .custom-table-right-tools .el-button--danger:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4) !important;
+}
+
+/* ---- Table ---- */
+.custom-table-container .el-table {
+  --el-table-border-color: #ececec;
+  --el-table-header-bg-color: #fafafa;
+  --el-table-row-hover-bg-color: #f9fafb;
+  --el-table-tr-bg-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #ececec;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.custom-table-container .el-table th.el-table__cell {
+  background: #fafafa !important;
+  height: 44px;
+}
+.custom-table-container .el-table th.el-table__cell .cell {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.custom-table-container .el-table td.el-table__cell {
+  height: 52px;
+}
+.custom-table-container .el-table td.el-table__cell .cell {
+  font-size: 13px;
+  color: #1f2937;
+}
+.custom-table-container .el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  background: #fafafa;
+}
+
+/* ---- Action buttons in table (icons are SVG with stroke="white" so need SOLID backgrounds) ---- */
+.custom-table-container .el-table .el-button {
+  width: 34px;
+  height: 34px;
+  padding: 0 !important;
+  margin: 0 3px;
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+.custom-table-container .el-table .el-button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* View — solid blue */
+.custom-table-container .el-table .el-button--info {
+  background: #3b82f6 !important;
+}
+.custom-table-container .el-table .el-button--info:hover {
+  background: #2563eb !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Edit — solid amber */
+.custom-table-container .el-table .el-button--warning {
+  background: #f59e0b !important;
+}
+.custom-table-container .el-table .el-button--warning:hover {
+  background: #d97706 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.35) !important;
+}
+
+/* Delete — solid red */
+.custom-table-container .el-table .el-button--danger {
+  background: #ef4444 !important;
+}
+.custom-table-container .el-table .el-button--danger:hover {
+  background: #dc2626 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35) !important;
+}
+
+/* ---- Pagination ---- */
+.custom-table-container .el-pagination {
+  margin-top: 20px;
+  padding: 4px 0;
+  justify-content: center;
+}
+.custom-table-container .el-pagination .el-pagination__total,
+.custom-table-container .el-pagination .el-pagination__jump {
+  font-size: 13px;
+  color: #6b7280;
+}
+.custom-table-container .el-pagination .el-input__wrapper {
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #ececec;
+}
+.custom-table-container .el-pagination.is-background .btn-prev,
+.custom-table-container .el-pagination.is-background .btn-next,
+.custom-table-container .el-pagination.is-background .el-pager li {
+  background: #ffffff !important;
+  border: 1px solid #ececec !important;
+  border-radius: 8px !important;
+  color: #4b5563 !important;
+  font-weight: 500;
+  transition: all 0.15s ease !important;
+}
+.custom-table-container .el-pagination.is-background .btn-prev:hover:not(.is-disabled),
+.custom-table-container .el-pagination.is-background .btn-next:hover:not(.is-disabled),
+.custom-table-container .el-pagination.is-background .el-pager li:hover:not(.is-disabled) {
+  color: #2563eb !important;
+  border-color: #bfdbfe !important;
+  background: #eff6ff !important;
+}
+.custom-table-container .el-pagination.is-background .el-pager li.is-active {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* Light mode cell color */
+.light .custom-table-container .el-table--default .cell {
+  color: #1f2937;
+}
+.light .custom-table-container .cell span {
+  color: #1f2937;
 }
 </style>

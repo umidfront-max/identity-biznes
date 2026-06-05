@@ -116,283 +116,215 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="login-container">
-    <div class="login-right-tools">
+  <div class="login-page">
+    <div class="login-tools">
       <vab-language />
       <vab-dark />
     </div>
 
-    <div class="login-card">
-      <!-- Left side - illustration -->
-      <div class="login-left">
-        <div class="login-left-content">
-          <img alt="Identity Biznes" class="login-illustration" src="/src/assets/login-illustration.svg" />
-          <h2 class="login-left-title">{{ title }}</h2>
-          <p class="login-left-desc">{{ $t('login.welcome_to') }}{{ title }}</p>
-        </div>
+    <div class="login-box">
+      <div class="login-brand">
+        <div class="brand-mark">IB</div>
+        <span class="brand-name">{{ title }}</span>
       </div>
 
-      <!-- Right side - form -->
-      <div class="login-right">
-        <div class="login-right-content">
-          <div class="login-logo-area">
-            <img alt="Logo" class="login-logo" src="/src/assets/logo2.svg" />
-          </div>
-          <h1 class="login-title">{{ $t('login.hello') }}</h1>
-          <p class="login-subtitle">{{ $t('login.welcome_to') }}{{ title }}</p>
-
-          <el-form ref="_formRef" label-position="top" :model="_form" :rules="rules" @submit.prevent="handleLogin">
-            <el-form-item :label="t('login.placeholders.user_name')" prop="username">
-              <el-input v-model.trim="_form.username" clearable :placeholder="t('login.placeholders.user_name')" size="large" type="text">
-                <template #prefix>
-                  <vab-icon icon="user-line" />
-                </template>
-              </el-input>
-            </el-form-item>
-            <el-form-item :label="t('login.placeholders.password')" prop="password">
-              <el-input
-                ref="passwordRef"
-                v-model.trim="_form.password"
-                clearable
-                :placeholder="t('login.placeholders.password')"
-                size="large"
-                type="password"
-              >
-                <template #prefix>
-                  <vab-icon icon="lock-line" />
-                </template>
-              </el-input>
-            </el-form-item>
-            <el-button class="login-btn" :loading="_loading" native-type="submit" size="large" type="primary">
-              {{ $t('login.login') }}
-            </el-button>
-          </el-form>
-
-          <div class="login-demo-hint">
-            <span>Demo: admin / admin</span>
-          </div>
-        </div>
+      <div class="login-heading">
+        <h1>{{ $t('login.hello') }}</h1>
+        <p>{{ $t('login.welcome_to') }}{{ title }}</p>
       </div>
+
+      <el-form ref="_formRef" label-position="top" :model="_form" :rules="rules" @submit.prevent="handleLogin">
+        <el-form-item :label="t('login.placeholders.user_name')" prop="username">
+          <el-input
+            v-model.trim="_form.username"
+            clearable
+            :placeholder="t('login.placeholders.user_name')"
+            size="large"
+            type="text"
+          />
+        </el-form-item>
+        <el-form-item :label="t('login.placeholders.password')" prop="password">
+          <el-input
+            ref="passwordRef"
+            v-model.trim="_form.password"
+            clearable
+            :placeholder="t('login.placeholders.password')"
+            size="large"
+            type="password"
+            show-password
+          />
+        </el-form-item>
+        <el-button class="login-submit" :loading="_loading" native-type="submit" size="large" type="primary">
+          {{ $t('login.login') }}
+        </el-button>
+      </el-form>
+
+      <div class="login-hint">Demo: admin / admin</div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.login-container {
+.login-page {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  overflow: hidden;
+  padding: 24px;
+  background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-    animation: bgMove 20s ease-in-out infinite;
-  }
+.login-tools {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+}
 
-  .login-right-tools {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+}
 
-  .login-card {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    width: 960px;
-    max-width: 95vw;
-    min-height: 560px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    border-radius: 24px;
-    box-shadow:
-      0 25px 60px rgba(0, 0, 0, 0.15),
-      0 0 0 1px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-  }
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
 
-  .login-left {
-    flex: 1;
-    display: flex;
+  .brand-mark {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f0f0ff 0%, #e8e0ff 100%);
-    padding: 40px;
-
-    &-content {
-      text-align: center;
-    }
-
-    &-title {
-      margin-top: 20px;
-      font-size: 24px;
-      font-weight: 700;
-      color: #4f46e5;
-      letter-spacing: -0.5px;
-    }
-
-    &-desc {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #6b7280;
-    }
-  }
-
-  .login-illustration {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-  }
-
-  .login-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-
-    &-content {
-      width: 100%;
-      max-width: 360px;
-    }
-  }
-
-  .login-logo-area {
-    margin-bottom: 24px;
-
-    .login-logo {
-      width: 48px;
-      height: 48px;
-    }
-  }
-
-  .login-title {
-    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    font-size: 13px;
     font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 4px;
     letter-spacing: -0.5px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
   }
 
-  .login-subtitle {
-    font-size: 15px;
-    color: #6b7280;
-    margin-bottom: 32px;
-  }
-
-  .login-btn {
-    width: 100%;
-    height: 48px;
-    margin-top: 8px;
-    font-size: 16px;
+  .brand-name {
+    font-size: 14px;
     font-weight: 600;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    border: none;
-    transition: all 0.3s ease;
+    color: #111111;
+    letter-spacing: -0.2px;
+  }
+}
+
+.login-heading {
+  margin-bottom: 28px;
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111111;
+    letter-spacing: -0.4px;
+  }
+
+  p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+}
+
+.login-submit {
+  width: 100%;
+  height: 44px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  border-radius: 10px;
+  background: #2563eb;
+  border: none;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+  transition: all 0.15s ease;
+
+  &:hover,
+  &:focus {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+
+  &:active {
+    background: #1e40af;
+  }
+}
+
+.login-hint {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  letter-spacing: 0.2px;
+}
+
+:deep(.el-form-item) {
+  margin-bottom: 18px;
+
+  .el-form-item__label {
+    padding: 0 0 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.4;
+  }
+
+  .el-input__wrapper {
+    padding: 0 14px;
+    height: 42px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #e5e7eb;
+    transition: box-shadow 0.15s ease;
 
     &:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+      box-shadow: 0 0 0 1px #d1d5db;
+    }
+
+    &.is-focus {
+      box-shadow: 0 0 0 1.5px #2563eb;
     }
   }
 
-  .login-demo-hint {
-    margin-top: 24px;
-    text-align: center;
-    font-size: 13px;
-    color: #9ca3af;
+  .el-input__inner {
+    height: 42px;
+    font-size: 14px;
+    color: #111111;
 
-    span {
-      padding: 6px 16px;
-      background: #f3f4f6;
-      border-radius: 20px;
+    &::placeholder {
+      color: #9ca3af;
     }
   }
 
-  :deep(.el-form-item) {
-    margin-bottom: 20px;
-
-    .el-form-item__label {
-      font-weight: 500;
-      color: #374151;
-      font-size: 14px;
-      padding-bottom: 6px;
-    }
-
-    .el-input {
-      .el-input__wrapper {
-        border-radius: 12px;
-        padding: 4px 12px;
-        box-shadow: 0 0 0 1px #e5e7eb;
-        transition: all 0.3s ease;
-
-        &:hover {
-          box-shadow: 0 0 0 1px #a5b4fc;
-        }
-
-        &.is-focus {
-          box-shadow: 0 0 0 2px #6366f1;
-        }
-      }
-    }
-
-    .el-form-item__error {
-      font-size: 12px;
-    }
+  .el-form-item__error {
+    padding-top: 4px;
+    font-size: 12px;
   }
 }
 
-@keyframes bgMove {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(-2%, 1%);
-  }
-  50% {
-    transform: translate(1%, -1%);
-  }
-  75% {
-    transform: translate(-1%, 2%);
-  }
-}
-
-@media (max-width: 768px) {
-  .login-container {
-    .login-card {
-      flex-direction: column;
-      min-height: auto;
-    }
-
-    .login-left {
-      display: none;
-    }
-
-    .login-right {
-      padding: 32px 24px;
-    }
+@media (max-width: 480px) {
+  .login-box {
+    padding: 32px 24px;
+    border: none;
+    background: transparent;
   }
 }
 </style>

@@ -5,20 +5,9 @@
       ['vab-logo-' + theme.layout]: true,
     }"
   >
-    <!-- <router-link to="/">
-      <span class="logo">
-        <vab-icon v-if="logo" :icon="logo" is-custom-svg />
-      </span>
-      <span class="title" :class="{ 'hidden-xs-only': theme.layout === 'horizontal' }">
-        {{ title }}
-      </span>
-    </router-link> -->
     <router-link class="router-logo" to="/">
-      <img alt="" src="/src/assets/logo3.svg" style="display: inline-block; height: 40px; padding-top: 8px; margin-right: 60px" />
-      <span v-if="(route.path.includes('profile') || route.path == '/') && theme.layout == 'column'" class="logo">
-        <img v-if="logo" src="/src/assets/logo2.svg" style="display: inline-block; width: 42px; height: 42px; margin-right: auto" />
-      </span>
-      <!-- <vab-icon :icon="logo" is-custom-svg /> -->
+      <span class="brand-mark">IB</span>
+      <span class="brand-title">{{ title }}</span>
     </router-link>
   </div>
 </template>
@@ -29,121 +18,90 @@ import { useSettingsStore } from '/@/store/modules/settings'
 defineOptions({
   name: 'VabLogo',
 })
-const route = useRoute()
 const settingsStore = useSettingsStore()
-const { theme, logo } = storeToRefs(settingsStore)
+const { theme, title } = storeToRefs(settingsStore)
 </script>
 
 <style lang="scss" scoped>
-@mixin container {
-  position: relative;
-  height: var(--el-header-height);
-  overflow: hidden;
-  line-height: var(--el-header-height);
-  background: transparent;
-}
-
-@mixin logo {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  color: var(--el-title-color);
-  vertical-align: middle;
-  fill: currentColor;
-}
-
-@mixin title {
-  display: inline-block;
-  margin-left: 5px;
-  overflow: hidden;
-  font-size: 20px;
-  line-height: 55px;
-  color: var(--el-title-color);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-
 .vab-logo {
-  &-horizontal {
-    @include container;
-
-    .logo {
-      svg,
-      img {
-        @include logo;
-      }
-    }
-
-    .title {
-      @include title;
-    }
-  }
-
-  &-vertical,
-  &-column,
-  &-comprehensive {
-    @include container;
-
-    height: var(--el-logo-height);
-    line-height: var(--el-logo-height);
-    text-align: center;
-
-    .logo {
-      svg,
-      img {
-        @include logo;
-      }
-    }
-
-    .title {
-      @include title;
-      max-width: calc(var(--el-left-menu-width) - 60);
-    }
-  }
-
-  &-column {
-    background: var(--el-color-white) !important;
-
-    .logo {
-      position: fixed;
-      top: 0;
-      display: block;
-      width: var(--el-left-menu-width-min);
-      height: var(--el-logo-height);
-      margin: 0;
-      background: var(--el-menu-background-color);
-    }
-
-    .title {
-      position: fixed;
-      left: var(--el-left-menu-width-min) !important;
-      box-sizing: border-box;
-      display: block !important;
-      width: calc(var(--el-left-menu-width) - var(--el-left-menu-width-min) - 1px);
-      height: var(--el-nav-height);
-      margin-left: 0 !important;
-      color: var(--el-color-black) !important;
-      background: var(--el-color-white) !important;
-      border-bottom: 1px solid var(--el-border-color);
-
-      @include title;
-    }
-  }
+  position: relative;
+  height: var(--el-logo-height);
+  overflow: visible;
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
-.vab-logo-column .logo {
-  border-right: 1px solid #d9dbe8 !important;
-  border-bottom: 1px solid #d9dbe8 !important;
-}
-.router-logo {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-bottom: 1px solid #d9dbe8;
-}
-.vab-layout-horizontal {
+
+/* Column layout: IB mark centered in icon column, title positioned in menu column */
+.vab-logo-column {
   .router-logo {
-    border-bottom: none;
+    display: block;
+    height: 100%;
   }
+
+  .brand-mark {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--el-left-menu-width-min) / 2);
+    transform: translate(-50%, -50%);
+  }
+
+  .brand-title {
+    position: absolute;
+    top: 50%;
+    left: var(--el-left-menu-width-min);
+    transform: translateY(-50%);
+    padding-left: 16px;
+    width: calc(var(--el-left-menu-width) - var(--el-left-menu-width-min) - 16px);
+  }
+}
+
+/* Vertical / comprehensive / horizontal layouts: inline */
+.vab-logo-vertical,
+.vab-logo-comprehensive,
+.vab-logo-horizontal {
+  .router-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    gap: 10px;
+    text-decoration: none;
+  }
+}
+
+.router-logo {
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.brand-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* When sidebar collapsed — hide title, keep only IB mark */
+.vab-column-bar.is-collapse .brand-title,
+.vab-side-bar.is-collapse .brand-title {
+  display: none;
 }
 </style>

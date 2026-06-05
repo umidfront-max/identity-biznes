@@ -13,7 +13,7 @@ export const themeConfig: ThemeType = {
   // Column style: horizontal style horizontal, vertical style vertical, card style card, arrow style arrow, semicircle style semicircle
   columnStyle: 'card',
   // primary color
-  color: '#4e88f3',
+  color: '#2563eb',
   // Menu background follows color matching
   isFollow: false,
   // Whether the head is fixed or not
@@ -21,9 +21,9 @@ export const themeConfig: ThemeType = {
   // Whether to enable the top progress bar
   showProgressBar: true,
   // Whether to enable footer
-  showFooter: true,
+  showFooter: false,
   // Whether to open the tab page
-  showTabs: true,
+  showTabs: false,
   // Tab styles when displaying tabs: card style, smart style, smooth style, rectangular style rect
   tabsBarStyle: 'card',
   // Whether to display tab icons
@@ -31,17 +31,17 @@ export const themeConfig: ThemeType = {
   // Whether to enable the language selection component
   showLanguage: true,
   // Whether to enable the refresh component
-  showRefresh: true,
+  showRefresh: false,
   // Whether to enable the search component
-  showSearch: true,
+  showSearch: false,
   // Whether to enable theme components
-  showTheme: true,
+  showTheme: false,
   // Whether to enable notification components
   showNotice: true,
   // Whether to enable full-screen components
-  showFullScreen: true,
+  showFullScreen: false,
   // Whether to open the floating window on the right
-  showThemeSetting: true,
+  showThemeSetting: false,
   // Whether to enable dark components
   showDark: true,
   // No to collapse the left menu by default
@@ -51,7 +51,7 @@ export const themeConfig: ThemeType = {
   // Rounded corners (unit: px, type must be number)
   radius: 5,
   // Whether to enable lock screen
-  showLock: true,
+  showLock: false,
   // Whether to enable the color picker component
   showColorPicker: true,
   // color blindness

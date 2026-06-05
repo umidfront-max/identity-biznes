@@ -88,7 +88,7 @@ export const useSettingsStore = defineStore('settings', {
     logo: getLocalStorage('logo').logo || logo,
     mode: localStorage.getItem('vueuse-color-scheme') || 'light',
     persistenceTab,
-    theme: { ...defaultTheme, ...getLocalStorage('shop-vite-theme') } || {
+    theme: { ...defaultTheme, ...getLocalStorage('shop-vite-theme-v2') } || {
       ...defaultTheme,
     },
     title: getLocalStorage('title').title || title,
@@ -117,12 +117,13 @@ export const useSettingsStore = defineStore('settings', {
       this.mode = value
     },
     saveTheme() {
-      localStorage.setItem('shop-vite-theme', JSON.stringify(this.theme))
+      localStorage.setItem('shop-vite-theme-v2', JSON.stringify(this.theme))
     },
     resetTheme() {
       this.theme = { ...defaultTheme }
       if (this.device === 'mobile') this.theme = { ...defaultTheme, ...{ layout: 'vertical' } }
       localStorage.removeItem('shop-vite-theme')
+      localStorage.removeItem('shop-vite-theme-v2')
       this.updateTheme()
     },
     updateTheme() {

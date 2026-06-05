@@ -41,7 +41,30 @@ const handleTo = (path: any) => {
   :deep() {
     .el-breadcrumb__item {
       .el-breadcrumb__inner {
-        font-weight: normal;
+        font-size: 13px;
+        font-weight: 500;
+        color: #6b7280;
+
+        &.is-link {
+          color: #6b7280;
+
+          &:hover {
+            color: #111;
+          }
+        }
+      }
+
+      &:last-child {
+        .el-breadcrumb__inner {
+          font-weight: 600;
+          color: #111;
+        }
+      }
+
+      .el-breadcrumb__separator {
+        margin: 0 8px;
+        color: #d1d5db;
+        font-weight: 400;
       }
     }
   }

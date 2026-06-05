@@ -1,31 +1,29 @@
 <template>
   <el-dropdown class="vab-language" @command="handleCommand" @visible-change="handleVisibleChange">
-    <el-button v-if="locale == 'ru'" class="language_btn">
-      <div class="langs">
-        <img alt="" src="https://uxwing.com/wp-content/themes/uxwing/download/flags-landmarks/russia-flag-icon.png" />
-        <p>Русский</p>
-      </div>
-      <vab-icon class="vab-dropdown" :class="{ 'vab-dropdown-active': active }" icon="arrow-down-s-line" />
-    </el-button>
-    <el-button v-if="locale == 'uz'" class="language_btn">
-      <div class="langs">
-        <img alt="" src="/src/assets/uz.svg" />
-        <p>O'zbekcha</p>
-      </div>
-      <vab-icon class="vab-dropdown" :class="{ 'vab-dropdown-active': active }" icon="arrow-down-s-line" />
-    </el-button>
-    <el-button v-else class="language_btn">
-      <div class="langs">
-        <img alt="" src="https://i.pinimg.com/originals/2d/b7/76/2db7763b253f6380575929ac404b4b0b.png" />
-        <p>English</p>
-      </div>
-      <vab-icon class="vab-dropdown" :class="{ 'vab-dropdown-active': active }" icon="arrow-down-s-line" />
-    </el-button>
+    <button class="lang-btn">
+      <span class="lang-code">{{ currentLang.code }}</span>
+      <vab-icon class="lang-chevron" :class="{ 'is-active': active }" icon="arrow-down-s-line" />
+    </button>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item command="ru">Русский</el-dropdown-item>
-        <el-dropdown-item command="uz">O'zbekcha</el-dropdown-item>
-        <el-dropdown-item command="en">English</el-dropdown-item>
+        <el-dropdown-item command="ru">
+          <span class="lang-item">
+            <span class="lang-item-code">RU</span>
+            <span>Русский</span>
+          </span>
+        </el-dropdown-item>
+        <el-dropdown-item command="uz">
+          <span class="lang-item">
+            <span class="lang-item-code">UZ</span>
+            <span>O'zbekcha</span>
+          </span>
+        </el-dropdown-item>
+        <el-dropdown-item command="en">
+          <span class="lang-item">
+            <span class="lang-item-code">EN</span>
+            <span>English</span>
+          </span>
+        </el-dropdown-item>
       </el-dropdown-menu>
     </template>
   </el-dropdown>
@@ -50,6 +48,12 @@ const route = useRoute()
 const settingsStore = useSettingsStore()
 const { changeLanguage } = settingsStore
 
+const currentLang = computed(() => {
+  if (locale.value === 'ru') return { code: 'RU' }
+  if (locale.value === 'uz') return { code: 'UZ' }
+  return { code: 'EN' }
+})
+
 const handleCommand = (language: string) => {
   changeLanguage(language)
   locale.value = language
@@ -57,53 +61,74 @@ const handleCommand = (language: string) => {
   location.reload()
 }
 </script>
-<style lang="scss">
-.language_btn {
-  width: 112px !important;
-  height: 32px;
-  padding: 5px !important;
-  margin-left: 10px;
-  background: #f1f5f9 !important;
-  .langs {
-    display: flex;
-    column-gap: 1px;
-    align-items: center;
-    width: 90px;
-    p {
-      margin-top: 17px;
-    }
-    img {
-      width: 16px;
-      height: 16px;
-      border-radius: 100%;
-    }
-  }
-  &:hover {
-    background: var(--el-color-primary-light-9) !important;
-  }
-  .vab-dropdown {
-    color: #0f172a !important;
-  }
-  img {
-    margin-right: 5px;
-  }
-  .icons {
-    font-size: 15px;
-    color: #0f172a !important;
-  }
-  .el-button {
-    width: 32px !important;
-    padding: 5px !important;
-  }
+<style lang="scss" scoped>
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 40px;
+  padding: 0 12px 0 14px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
 }
-.dark .language_btn {
-  background: transparent !important;
-  .icons,
-  .vab-dropdown {
-    color: #f1f5f9 !important;
-  }
-  &:hover {
-    background: var(--el-color-primary-light-9) !important;
+
+.lang-btn:hover {
+  background: #e5e7eb;
+}
+
+.lang-code {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111111;
+  letter-spacing: 0.3px;
+}
+
+.lang-chevron {
+  font-size: 16px;
+  color: #111111;
+  transition: transform 0.2s ease;
+}
+
+.lang-chevron.is-active {
+  transform: rotate(180deg);
+}
+
+.dark .lang-btn {
+  background: #1f2937;
+}
+
+.dark .lang-code,
+.dark .lang-chevron {
+  color: #f3f4f6;
+}
+
+.dark .lang-btn:hover {
+  background: #374151;
+}
+</style>
+
+<style lang="scss">
+.lang-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+
+  .lang-item-code {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 22px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #6b7280;
+    background: #f3f4f6;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
   }
 }
 </style>

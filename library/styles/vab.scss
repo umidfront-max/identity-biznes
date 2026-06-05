@@ -93,16 +93,16 @@ html {
         .vab-main {
           .vab-app-main {
             width: 100%;
-            padding: var(--el-padding);
+            padding: 20px 24px;
             overflow: hidden;
 
             > section {
               > [class*='-container'] {
                 min-height: var(--el-container-height);
-                padding: var(--el-padding);
-                background: var(--el-color-white);
-                border: 1px solid var(--el-border-color);
-                border-radius: var(--el-border-radius-base);
+                padding: 24px;
+                background: #ffffff;
+                border: 1px solid #ececec;
+                border-radius: 12px;
               }
             }
           }
@@ -133,10 +133,11 @@ html {
 
     * {
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
       outline: none !important;
       -webkit-tap-highlight-color: transparent;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
 
       @include base-scrollbar;
     }
@@ -1006,4 +1007,123 @@ html body .el-menu .el-sub-menu__title [class*='ri-'] {
   &:hover {
     background: var(--el-color-primary-light-9) !important;
   }
+}
+
+/* ============================================================
+   GLOBAL BUTTON STYLES (minimal clean)
+   Action SVG icons are hardcoded with stroke="white" — they
+   require SOLID coloured backgrounds to be visible.
+   ============================================================ */
+
+/* Generic icon-only action buttons (used outside tables too) */
+.el-button--info,
+.el-button--warning,
+.el-button--danger,
+.el-button--primary {
+  border-radius: 8px !important;
+  font-weight: 500;
+  transition: all 0.15s ease !important;
+}
+
+/* Solid INFO (view) */
+.el-button--info {
+  color: #ffffff !important;
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+.el-button--info:hover,
+.el-button--info:focus {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Solid WARNING (edit) */
+.el-button--warning {
+  color: #ffffff !important;
+  background: #f59e0b !important;
+  border-color: #f59e0b !important;
+}
+.el-button--warning:hover,
+.el-button--warning:focus {
+  background: #d97706 !important;
+  border-color: #d97706 !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Solid DANGER (delete) */
+.el-button--danger {
+  color: #ffffff !important;
+  background: #ef4444 !important;
+  border-color: #ef4444 !important;
+}
+.el-button--danger:hover,
+.el-button--danger:focus {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Solid PRIMARY (add / submit) */
+.el-button--primary {
+  color: #ffffff !important;
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+}
+.el-button--primary:hover,
+.el-button--primary:focus {
+  background: #1d4ed8 !important;
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Text/link variants — keep transparent, just colour text */
+.el-button.is-text,
+.el-button.is-link {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.el-button--primary.is-text,
+.el-button--primary.is-link {
+  color: #2563eb !important;
+}
+.el-button--info.is-text,
+.el-button--info.is-link {
+  color: #6b7280 !important;
+}
+.el-button--warning.is-text,
+.el-button--warning.is-link {
+  color: #d97706 !important;
+}
+.el-button--danger.is-text,
+.el-button--danger.is-link {
+  color: #dc2626 !important;
+}
+
+/* SVG action icons inside buttons — keep crisp white */
+.el-button--info img,
+.el-button--warning img,
+.el-button--danger img,
+.el-button--primary img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* Plain (default) icon-only button */
+.el-button.is-circle,
+.el-button:not([class*='el-button--']) {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  color: #4b5563;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+.el-button.is-circle:hover,
+.el-button:not([class*='el-button--']):hover {
+  color: #2563eb !important;
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
 }

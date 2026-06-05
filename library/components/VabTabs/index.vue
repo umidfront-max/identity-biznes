@@ -330,10 +330,11 @@ watchEffect(() => {
   align-items: center;
   justify-content: space-between;
   min-height: var(--el-tabs-height);
-  padding-right: var(--el-padding);
-  padding-left: var(--el-padding);
+  padding-right: 16px;
+  padding-left: 16px;
   user-select: none;
-  background: var(--el-color-white);
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
 
   :deep() {
     .fold-unfold {
@@ -387,13 +388,26 @@ watchEffect(() => {
         .el-tabs__header {
           .el-tabs__item {
             height: var(--el-tab-item-height);
-            margin-right: 5px;
-            border: 1px solid var(--el-border-color) !important;
-            border-radius: var(--el-border-radius-base) !important;
+            padding: 0 12px !important;
+            margin-right: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #6b7280;
+            background: transparent;
+            border: 1px solid transparent !important;
+            border-radius: 8px !important;
+            transition: all 0.15s ease;
+
+            &:hover {
+              color: #111;
+              background: #f3f4f6;
+            }
 
             &.is-active {
-              color: var(--el-color-primary);
-              background: var(--el-color-primary-light-9);
+              color: #111;
+              font-weight: 600;
+              background: #f3f4f6;
+              border-color: #ececec !important;
             }
           }
         }

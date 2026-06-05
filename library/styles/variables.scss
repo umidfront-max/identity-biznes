@@ -21,62 +21,58 @@ $base-border-color-light: #e4e7ed;
 $base-border-color-lighter: #ebeef5;
 $base-border-color-extra-light: #f2f6fc;
 
-// Custom styles
-$base-color-primary: #008dff;
-$base-color-warning: #ffa515;
-$base-color-danger: #f44;
-$base-background-color: #f2f2f7;
-$base-color-text-secondary: #00bfaf;
-$base-logo-height: 80px;
-$base-nav-height: 80px;
-$base-left-menu-width: 320px;
-$base-left-menu-width-min: 100px;
+// Custom styles (minimal & clean)
+$base-color-primary: #2563eb;
+$base-color-warning: #f59e0b;
+$base-color-danger: #ef4444;
+$base-background-color: #fafafa;
+$base-color-text-secondary: #6b7280;
+$base-logo-height: 64px;
+$base-nav-height: 60px;
+$base-left-menu-width: 280px;
+$base-left-menu-width-min: 72px;
 // End of Custom styles
 
 //默认层级
 $base-z-index: 1999;
 //菜单背景色
-$base-menu-background: #282c34;
+$base-menu-background: #ffffff;
 //菜单文字颜色
-$base-menu-color: hsla(0, 0%, 100%, 0.95);
+$base-menu-color: #4b5563;
 //菜单选中文字颜色
-$base-menu-color-active: hsla(0, 0%, 100%, 0.95);
+$base-menu-color-active: #2563eb;
 //菜单选中背景色
-$base-menu-active: $base-color-primary;
+$base-menu-active: #eff6ff;
 //标题颜色
-$base-title-color: #fff;
+$base-title-color: #111111;
 //字体大小配置
 $base-font-size-small: 12px;
-$base-font-size-default: 14px;
-$base-font-size-big: 16px;
-$base-font-size-bigger: 18px;
+$base-font-size-default: 13px;
+$base-font-size-big: 15px;
+$base-font-size-bigger: 17px;
 $base-font-size-max: 22px;
 //最大宽度
 $base-main-width: 1279px;
 //圆角
-$base-border-radius: 5px;
+$base-border-radius: 8px;
 //边框颜色
-$base-border-color: #dcdfe6;
+$base-border-color: #ececec;
 //输入框高度
-$base-input-height: 32px;
+$base-input-height: 36px;
 //默认margin
-$base-margin: 20px;
+$base-margin: 16px;
 //默认padding
 $base-padding: 20px;
 //默认阴影
-$base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+$base-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 //横向top-bar、logo、一级菜单的高度
 $base-header-height: 60px;
-//纵向、综合、分栏logo的高度
-$base-logo-height: 60px;
-//顶部nav-bar的高度
-$base-nav-height: 60px;
 //顶部标签页tabs-bar的高度
-$base-tabs-height: 50px;
+$base-tabs-height: 44px;
 //顶部标签页tabs-bar中每一个item的高度
-$base-tab-item-height: 34px;
+$base-tab-item-height: 30px;
 //菜单li标签的高度
-$base-menu-item-height: 50px;
+$base-menu-item-height: 40px;
 //纵向左侧导航未折叠的宽度
 $base-left-menu-width: 266px;
 //纵向左侧导航已折叠的宽度
@@ -171,7 +167,6 @@ $vab-color-info-light-8: rgba($base-color-text-secondary, 0.2);
 $vab-color-info-light-9: rgba($base-color-text-secondary, 0.1);
 
 // =======custom varible ======
-$base-menu-background: #fff;
-$base-left-menu-width-min: 96px;
-// $base-left-menu-width-min: 76px;
+$base-menu-background: #ffffff;
+$base-left-menu-width-min: 72px;
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
