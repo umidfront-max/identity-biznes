@@ -1,6 +1,7 @@
 /**
  * @description Status management of all global configurations, please do not modify them unless necessary
  */
+import { defineStore } from 'pinia'
 import {
   persistenceTab as _persistenceTab,
   color,

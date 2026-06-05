@@ -1,3 +1,5 @@
+import { defineStore } from 'pinia'
+
 export const useErrorLogStore = defineStore('errorLog', {
   state: (): ErrorLogModuleType => ({
     errorLogs: [],

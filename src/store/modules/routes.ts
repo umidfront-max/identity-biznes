@@ -1,5 +1,5 @@
+import { defineStore } from 'pinia'
 import { rolesControl } from '/@/config'
-import { asyncRoutes, constantRoutes, resetRouter } from '/@/router'
 import { filterRoutes } from '/@/utils/routes'
 
 const filterHidden = (data: any) => {
@@ -51,6 +51,8 @@ export const useRoutesStore = defineStore('routes', {
      * @returns
      */
     async setRoutes() {
+      // Dynamic import breaks circular dependency: routes.ts → router → permissions → routes.ts
+      const { asyncRoutes, constantRoutes, resetRouter } = await import('/@/router')
       // Default front-end routing
       const routes = [...asyncRoutes]
       // Set guest routing to turn off route interception (can be deleted if not required)

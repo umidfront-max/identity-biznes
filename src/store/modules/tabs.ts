@@ -1,3 +1,4 @@
+import { defineStore } from 'pinia'
 import { useSettingsStore } from './settings'
 
 export type TabsModuleType = {
