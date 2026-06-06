@@ -1,5 +1,6 @@
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { RemoveItemModel, RemovePhoneItemModel, removeItem_API, removePhoneItem_API } from './index'
+import { removeItem_API, removePhoneItem_API } from './api'
+import type { RemoveItemModel, RemovePhoneItemModel } from './model'
 
 export function OPEN_REMOVE_MODAL(payload: RemoveItemModel | RemovePhoneItemModel, isPhone = false) {
   const title = payload.title || 'Are you sure you want to delete the selected item?'

@@ -1,7 +1,6 @@
 import { stringify } from 'qs'
 import { contentType, debounce, messageName, timeout } from '/@/config'
-import router from '/@/router'
-import { RESET_ALL, _TOKEN, _deviceStore } from '/@/services/profile'
+import { RESET_ALL, _TOKEN, _deviceStore } from '/@/services/profile/store'
 import { addErrorLog, needErrorLog } from '/@vab/plugins/errorLog'
 import { gp } from '/@vab/plugins/vab'
 
@@ -78,13 +77,17 @@ const handleData = async ({ data, status, statusText }: { data: any; status: any
     case 200:
     case 201:
       return Promise.resolve(data)
-    case 401:
+    case 401: {
       RESET_ALL()
+      const { default: router } = await import('/@/router')
       router.push({ path: '/login', replace: true })
       break
-    case 403:
+    }
+    case 403: {
+      const { default: router } = await import('/@/router')
       router.push({ path: '/403' }).then(() => {})
       break
+    }
   }
 
   // Exception handling

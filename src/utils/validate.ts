@@ -1,5 +1,3 @@
-import { translate } from '/@/i18n'
-
 /**
  * @description Determine whether it is an external link
  * @param value
@@ -213,9 +211,4 @@ export const isChinese = (value: string) => {
 export const isEnglish = (value: string) => {
   const reg = /^[a-zA-Z]+$/
   return reg.test(value)
-}
-
-export const isRequired = (rule: any, value: any, callback: any, errorMsg: string) => {
-  if ('' === value) callback(new Error(translate(errorMsg)))
-  else callback()
 }

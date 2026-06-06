@@ -1,5 +1,6 @@
 import { useStorage } from '@vueuse/core'
-import { device_DEFAULT, DeviceModel, getProfile_DEFAULT } from '.'
+import { device_DEFAULT, getProfile_DEFAULT } from './default'
+import type { DeviceModel } from './model'
 import { useTabsStore } from '/@/store/modules/tabs.ts'
 
 export const _deviceStore = useStorage<DeviceModel>('device-store', device_DEFAULT())

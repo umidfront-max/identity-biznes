@@ -1,10 +1,5 @@
-import {
-  CustomerFullInfoModel,
-  CustomerShortDetailsModel,
-  getCustomerPassportInfo_DEFAULT,
-  ConfirmCardModel,
-  CustomerFullRequestInfoModel,
-} from '.'
+import type { CustomerFullInfoModel, CustomerShortDetailsModel, ConfirmCardModel, CustomerFullRequestInfoModel } from './model'
+import { getCustomerPassportInfo_DEFAULT } from './passport/default'
 export function getCustomerShortDetails_DEFAULT(): CustomerShortDetailsModel {
   const object: CustomerShortDetailsModel = {
     birth_date: new Date(),

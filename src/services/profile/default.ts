@@ -1,4 +1,4 @@
-import { AvatarModel, PROFIL_STATUS_ENUM, type DeviceModel, type ProfileModel } from '.'
+import { type AvatarModel, type DeviceModel, type ProfileModel, PROFIL_STATUS_ENUM } from './model'
 
 export function device_DEFAULT(): DeviceModel {
   const object: DeviceModel = {

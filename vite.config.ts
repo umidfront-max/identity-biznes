@@ -48,6 +48,14 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           entryFileNames: 'js/[name].js',
           assetFileNames: 'assets/[name].[ext]',
         },
+        onwarn(warning, warn) {
+          // surface circular dependency warnings
+          if (warning.code === 'CIRCULAR_DEPENDENCY') {
+            console.warn('[CIRCULAR]', warning.message)
+            return
+          }
+          warn(warning)
+        },
       },
 
       minify,
